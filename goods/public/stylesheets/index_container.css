@@ -12,52 +12,73 @@
 }
 .main_left {
     position: relative;
-    width: 175px;
-    height: 680px;
+    width: 200px;
+    height: auto;
     border-width: 1px;
     border-color: #5f9ea0;
     border-style: solid;
     border-radius: 5px;
     float:left;    
 }
+.books,.shuma,.computer,.cards,.plays,.decoration,.shoes,.clothes,.sports,.girls,.boys {
+    width: 100%;
+}
+.softs_span {
+    background-color:#15B69A; 
+    width:100%;
+    margin:auto;
+    padding:8px 0px;
+    text-align: center;
+    color:#fff;   
+}
+.main_left ul {
+    margin:0px;
+    padding:0px;
+
+}
 .main_left ul li{
     list-style: none;
+    margin:5px;
+    padding:0px;
+    width:90px;
+    float:left;
+    text-align: center;
 }
-.main_right{
+/*  main middle */
+.main_middle{
     position: relative;
-    width:860px;
-    padding-left:10px;
-    padding-right:10px;
+    width:840px;
+    padding:0px 5px;
     float:left;
 }
-
-.main_right_top img{
+.main_middle_top {
+    padding:5px 10px;
+}
+.main_middle_top img{
     width: 100%;
     height: 300px;
 }
-img{
-    border: none;
-}
-.main_right_center{
+
+.main_middle_center{
     width:100%;
     height:780px;
     border-top:1px solid #5f9ea0;
     margin-top:10px;
 }
-.main_right_center_ul {
+.main_middle_center_ul {
     width: 98%;
     margin:auto;
 }
-.main_right_center_ul ul {
+.main_middle_center_ul ul {
     margin:0px;
     padding: 0px;
 }
-.main_right_center_ul ul li{
+.main_middle_center_ul ul li{
     float:left;
     margin:20px 0px 20px 35px;
     list-style: none;
 }
-.main_right_center ul li img{
+.main_middle_center ul li img{
     width:230px;
 }
 .goods_name,.goods_price,.goods_ower {
@@ -85,22 +106,29 @@ img{
 .span5{
     float:right;
 }
-.main_r {
+/* main right */
+.main_right {
     position: relative;
     width: 175px;
     height: 800px;
     float:left;
 }
-.main_r_dyn,.main_r_sell {
-    border:1px solid #5f9ea0;
-    border-radius: 5px;
+.main_right_dyn,.main_right_sell {
+/*    border:1px solid #5f9ea0;
+    border-radius: 5px;*/
     margin-bottom: 5px;
 }
-.main_r_dyn{
+.main_right_dyn{
     width:100%;
     height:200px;
 }
-.main_r_sell {
+.main_right_sell {
     width:100%;
     height:220px;
+}
+.dyn_title,.msg_title {
+    border-bottom:2px solid #5f9ea0; 
+    width:100%;
+    padding:5px 0px;
+    text-align: center;
 }

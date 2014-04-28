@@ -1,0 +1,58 @@
+
+doctype html
+html(lang="zh-cn")
+    head
+        meta(charset="utf-8")
+        meta(name="description", content="管理员后台")
+        meta(name="author", content="ziyan")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="robots", content="noindex, nofollow")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title 管理员后台
+
+    body
+        .top_nav
+            p 校易通-管理员后台
+        .admin_container
+            .left
+                //-.welcome
+                    span #{userinfo.username}
+                    a(href="#") 退出
+                hr
+
+                ul
+                    li
+                        a.but_meeting_room(href="#meeting_room")
+                            i.mr_icon.glyphicon.glyphicon-th-list
+                            span.selected 会议室
+                    li
+                        a.but_permission(href="#permission")
+                            i.per_icon.glyphicon.glyphicon-wrench
+                            span 预定权限
+                    li
+                        a.but_booking(href="#booking")
+                            i.book_icon.glyphicon.glyphicon-time
+                            span 会议室预定
+                    li
+                        a.but_book_msg(href="#book_msg")
+                            i.bm_icon.glyphicon.glyphicon-search
+                            span 预定信息
+
+            #admin_right
+                #meeting_room(style="display:inline")
+                    .r_container
+                        .admin_right_to_center
+                            include ./meeting_room
+                #permission
+                    .r_container
+                        .admin_right_to_center
+                            include ./permission
+                #booking
+                    .r_container
+                        .admin_right_to_center
+                            include ./booking
+                #book_msg
+                    .r_container
+                        .admin_right_to_center
+                            include ./book_msg
+            .clearfix

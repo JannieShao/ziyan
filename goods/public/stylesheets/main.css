@@ -10,11 +10,27 @@ a {
     text-decoration: none;
     text-align: center;
     outline: none;
-    color: #3cb371;
-}
-a:hover {
     color: #5f9ea0;
 }
+a:hover {
+    color: #3cb371;
+}
+img{
+    border: none;
+}
+/* slightly enhanced, universal clearfix hack */
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix { 
+    display: inline-block; 
+}
+/* the top menu fixed */
 .top {
     color: #5f9ea0;
     background-color: #e5e5e5;
@@ -32,23 +48,27 @@ a:hover {
     width: 1240px;
     margin: auto;    
 }
-.top_show a {
+.top_user {
+    float:left;
+}
+.top_user a {
     color: #5f9ea0;
 }
-.top_show a:hover{
+.top_user a:hover{
     color: #3cb371;
 }
-.top_show ul li {
+.top_user li {
     list-style: none;
     float: left;
-    margin: 5px;
+    margin: 0px 5px;
 }
 .top_right {
     float: right;
     height: 30px;
     line-height: 20px;
     overflow: hidden;
-    margin-right: 60px;    
+    margin-right: 60px;
+    margin-top: 7px;    
 }
 .car_div{
     background: url("../images/car_bg.png") no-repeat; 
@@ -64,9 +84,16 @@ a:hover {
     font-weight: bold;
     font-size: 16px;
 }
-.kfc {
+.car_text:hover {
+    color:#3cb371;
+}
+.kfc,.kfc a{
     color: gray;
 }
+.kfc a:hover{
+    color: #3cb371;
+}
+/* log and search bar */
 .top_search{
     position: relative;
     padding-top: 40px;
@@ -125,6 +152,7 @@ a:hover {
 .search_a_show a:hover {
     color:#fff;
 }
+/* menu */
 .top_menu {
     position: relative;
     width:100%;
@@ -142,18 +170,30 @@ a:hover {
     margin:auto;
     clear:both;
 }
-.top_menu ul {
+.menu_ul ul {
     margin:0px;
+    padding:0px;
 }
-.top_menu ul li{
+.menu_ul ul li{
     list-style: none;
     float:left;
-    padding:11px 10px 13px 10px;
+    padding:11px 10px 13px 10px;    
 }
-.top_menu ul li:hover{
-    background-color:#15B69A;
+.menu_ul ul li:hover{
+    background-color:#15B69A;    
 }
-.top_menu ul li a {
+.menu_ul ul li a {
     padding:11px 10px 13px 10px;
     color:#fff;
+}
+.all_softs {
+    width:180px;
+    height:100%;
+    text-align: center; 
+    margin:0px;
+    padding:0px; 
+    background: url("../images/top_menu_bg.png") 140px 0px no-repeat;
+}
+.all_softs:hover{
+    background: url("../images/top_menu_bg.png") 140px -40px no-repeat;
 }

@@ -1,17 +1,118 @@
-extends top
+extends ./includes/top
 
-block main
+append  main
     .content
         .main
             .main_left
-                ul
-                    li jfidjfkd
-            .main_right
-                .main_right_top
+                .books.clearfix 
+                    .softs_span 书 籍
+                    ul.clearfix
+                        li 教材
+                        li 考研考级
+                        li 杂志
+                        li 小说
+                        li 漫画
+                        li 其他
+                .shuma.clearfix
+                    .softs_span  数 码
+                    ul.clearfix
+                        li 手机
+                        li 数码相机
+                        li mp3/4
+                        li 耳机
+                        li u盘
+                        li 读卡器
+                        li 光盘
+                        li 其他
+                .computer.clearfix
+                    .softs_span 电脑及周边
+                    ul.clearfix
+                        li 电脑整机
+                        li 显示器
+                        li 键盘
+                        li 笔记本
+                        li 配件
+                        li 路由器
+                        li 交换机
+                        li 其他
+                .cards.clearfix
+                    .softs_span 卡/票/证
+                    ul.clearfix
+                        li 手机卡
+                        li 充值卡
+                        li 上网卡
+                        li 公交卡
+                        li IP卡/电话卡
+                        li 门票
+                        li 听课证
+                        li 打折卡/优惠券
+                        li 其他
+                .plays.clearfix
+                    .softs_span 休闲娱乐
+                    ul.clearfix
+                        li 游戏
+                        li 乐器
+                        li 玩具
+                        li 收藏
+                        li 单车
+                        li 其他
+                .decoration.clearfix
+                    .softs_span 饰品/手表
+                    ul.clearfix
+                        li 项链/项坠
+                        li 戒指/指环
+                        li 手链/手镯
+                        li 耳钉/耳坠
+                        li 太阳镜
+                        li 手表/怀表
+                        li 毛衣链
+                        li 其他
+                .shoes.clearfix
+                    .softs_span 鞋 包
+                    ul.clearfix
+                        li 女鞋
+                        li 男鞋
+                        li 女包
+                        li 男包
+                        li 箱包
+                        li 其他
+                .clothes.clearfix
+                    .softs_span 服 装
+                    ul.clearfix
+                        li 女上装
+                        li 女下装
+                        li 男上装
+                        li 男下装
+                .sports.clearfix
+                    .softs_span 体育用品
+                    ul.clearfix
+                        li 轮滑/滑板
+                        li 球/球拍
+                        li 球衣/球鞋
+                        li 运动服
+                        li 其他
+                .girls.clearfix
+                    .softs_span 女生专区
+                    ul.clearfix 
+                        li 化妆品
+                        li 护肤
+                        li 香水
+                        li 美体瘦身
+                        li 时尚假发
+                        li 其他
+                .boys.clearfix
+                    .softs_span 男生专区
+                    ul.clearfix 
+                        li 打火机
+                        li 剃须刀
+                        li 男士护肤
+                        li 其他
+            .main_middle
+                .main_middle_top
                     img(src="#{img_path}/1111.jpg")
-                .main_right_center
-                    .main_right_center_ul
-                        ul
+                .main_middle_center
+                    .main_middle_center_ul
+                        ul.clearfix
                             -for(var i=0;i<6;i++)
                                 li
                                     a(href="#")
@@ -26,8 +127,22 @@ block main
                                     .goods_ower
                                         span.span4 最近17人成交
                                         span.span5 湖南 长沙
-            .main_r
-                .main_r_dyn 
-                    |动态
-                .main_r_sell
-                    |供需消息
+            .main_right
+                .main_right_dyn 
+                    .dyn_title 动态
+                    ul
+                        li 低碳生活从买卖二手物品开始
+                        li 低碳生活从买卖二手物品开始
+                        li 低碳生活从买卖二手物品开始
+                        li 低碳生活从买卖二手物品开始
+                .main_right_sell
+                    .msg_title 供需消息
+                    ul
+                        li 电脑一台
+                        li mp3一枚
+                        li 电脑一台
+                        li mp3一枚
+                        li 电脑一台
+                        li mp3一枚
+                        li 电脑一台
+                        li mp3一枚
