@@ -1,0 +1,33 @@
+extends top
+
+block main
+    .content
+        .main
+            .main_left
+                ul
+                    li jfidjfkd
+            .main_right
+                .main_right_top
+                    img(src="#{img_path}/1111.jpg")
+                .main_right_center
+                    .main_right_center_ul
+                        ul
+                            -for(var i=0;i<6;i++)
+                                li
+                                    a(href="#")
+                                        img(src="#{img_path}/001.jpg")
+                                    br
+                                    .goods_name
+                                        a(href="#") 99朵粉玫瑰长沙鲜花速递重庆南京鲜花南昌合肥鲜花店宁波大连送花
+                                    .goods_price
+                                        span.span1 ￥
+                                        span.span2 385.20
+                                        span.span3 运费：0.01
+                                    .goods_ower
+                                        span.span4 最近17人成交
+                                        span.span5 湖南 长沙
+            .main_r
+                .main_r_dyn 
+                    |动态
+                .main_r_sell
+                    |供需消息
