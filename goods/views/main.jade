@@ -5,7 +5,9 @@ append  main
         .main
             .main_left
                 .books.clearfix 
-                    .softs_span 书 籍
+                    .softs_span 
+                        i.icon-book
+                        span 书 籍
                     ul.clearfix
                         li 教材
                         li 考研考级
@@ -131,18 +133,25 @@ append  main
                 .main_right_dyn 
                     .dyn_title 动态
                     ul
-                        li 低碳生活从买卖二手物品开始
-                        li 低碳生活从买卖二手物品开始
-                        li 低碳生活从买卖二手物品开始
-                        li 低碳生活从买卖二手物品开始
+                        -for(var i=0;i<4;i++)
+                            li
+                                -if(i % 2 == 0) 
+                                    i.icon-comments
+                                -else
+                                    i.icon-comments-alt
+                                span 低碳生活从买卖二手物品开始
                 .main_right_sell
                     .msg_title 供需消息
                     ul
-                        li 电脑一台
-                        li mp3一枚
-                        li 电脑一台
-                        li mp3一枚
-                        li 电脑一台
-                        li mp3一枚
-                        li 电脑一台
-                        li mp3一枚
+                        -for(var i=0;i<6;i++)
+                            li
+                                -if(i % 2 == 0) 
+                                    i.icon-comments
+                                    span 求电脑一台
+                                -else
+                                    i.icon-comments-alt
+                                    span 出售mp3一枚
+//-------------------------------------------------------------------------------------
+append head
+    link(rel="stylesheet", href="/stylesheets/index_container.css",type="text/css")
+    link(rel="stylesheet", href="/vendor/font-awesome/css/font-awesome.min.css",type="text/css")

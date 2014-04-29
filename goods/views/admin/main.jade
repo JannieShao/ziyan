@@ -9,49 +9,65 @@ html(lang="zh-cn")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title 管理员后台
         link(rel="stylesheet", href="/stylesheets/admin/main.css",type="text/css")
+        link(rel="stylesheet", href="/vendor/bootstrap/css/bootstrap.min.css",type="text/css")
+        link(rel="stylesheet", href="/vendor/font-awesome/css/font-awesome.min.css",type="text/css")
     body
         .top_nav
             p 校易通-管理员后台
         .admin_container
             .left
-                //-.welcome
-                    span #{userinfo.username}
+                .welcome
+                    span 管理员
                     a(href="#") 退出
                 hr
-
                 ul
                     li
-                        a.but_meeting_room(href="#meeting_room")
-                            i.mr_icon.glyphicon.glyphicon-th-list
-                            span.selected 会议室
+                        a.admin_center(href="#admin_center")
+                            i.admin_icon.glyphicon.icon-user
+                            span.selected 管理员中心
                     li
-                        a.but_permission(href="#permission")
-                            i.per_icon.glyphicon.glyphicon-wrench
-                            span 预定权限
+                        a.user_control(href="#user_control")
+                            i.user_icon.glyphicon.icon-group
+                            span 用户
                     li
-                        a.but_booking(href="#booking")
-                            i.book_icon.glyphicon.glyphicon-time
-                            span 会议室预定
+                        a.goods_control(href="#goods_control")
+                            i.goods_icon.glyphicon.glyphicon-gift
+                            span 商品
                     li
-                        a.but_book_msg(href="#book_msg")
-                            i.bm_icon.glyphicon.glyphicon-search
-                            span 预定信息
+                        a.orders_control(href="#orders_control")
+                            i.orders_icon.glyphicon.glyphicon-list-alt
+                            span 订单
+                    li
+                        a.gx_msg(href="#gx_msg")
+                            i.gx_msg_icon.glyphicon.glyphicon-comment
+                            span 供需消息
+                    li
+                        a.user_msg(href="#user_msg")
+                            i.user_msg_icon.glyphicon.glyphicon-envelope
+                            span 站内信
 
             #admin_right
-                #meeting_room(style="display:inline")
+                #admin_center(style="display:inline")
                     .r_container
                         .admin_right_to_center
                             //-include ./meeting_room
-                #permission
+                #user_control
                     .r_container
                         .admin_right_to_center
                             //-include ./permission
-                #booking
+                #goods_control
                     .r_container
                         .admin_right_to_center
                             //-include ./booking
-                #book_msg
+                #orders_control
                     .r_container
                         .admin_right_to_center
                             //-include ./book_msg
-            .clearfix
+                #gx_msg
+                    .r_container
+                        .admin_right_to_center
+                            //-include ./book_msg
+                #user_msg
+                    .r_container
+                        .admin_right_to_center
+                            //-include ./book_msg

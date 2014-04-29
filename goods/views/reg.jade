@@ -1,0 +1,10 @@
+extends ./includes/top
+append main
+    .content
+        .main
+            .reg_form 新用户注册
+                form(action="/reg", method="post")
+
+//---------------------------------------------------------------------------
+append head
+    link(rel="stylesheet", href="/stylesheets/reg.css",type="text/css")

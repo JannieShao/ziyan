@@ -33,6 +33,7 @@ if ('development' == app.get('env')) {
 app.get('/index', routes.index);
 app.get('/login', routes.login);
 app.get('/admin', routes.admin);
+app.get('/register', routes.reg);
 
 
 http.createServer(app).listen(app.get('port'), function(){

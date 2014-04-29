@@ -12,7 +12,7 @@ html(lang="zh-cn")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title 校易通二手物品交易平台
         link(rel="stylesheet", href="/stylesheets/main.css",type="text/css")
-        link(rel="stylesheet", href="/stylesheets/index_container.css",type="text/css")
+
         //-link(rel="stylesheet", href="/vendor/bootstrap/css/bootstrap.css")
         //if lt IE 9
             script(src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js")
@@ -20,6 +20,7 @@ html(lang="zh-cn")
 
         script(type="text/javascript", src="/vendor/jquery/jquery-2.1.0.min.js")
         script(src="/vendor/bootstrap/js/bootstrap.min.js",type="text/javascript")
+        block head
     body
         .top
             .top_show
@@ -33,7 +34,7 @@ html(lang="zh-cn")
                         li 亲，请
                             a(href = "/login") 登录
                         li 
-                            a(href = "#") 免费注册
+                            a(href = "/register") 免费注册
                 .top_right
                     .car_div
                         a(href="#")
@@ -55,7 +56,7 @@ html(lang="zh-cn")
                     li.all_softs                         
                         a(href="#") 全部分类
                     li
-                        a(href="#") 首页
+                        a(href="/index") 首页
                     li 
                         a(href="#") 帮助
 

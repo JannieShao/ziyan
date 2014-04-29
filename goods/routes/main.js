@@ -21,3 +21,6 @@ exports.login = function(req, res) {
 exports.admin = function(req, res) {
     res.render('admin/main');
 }
+exports.reg = function(req, res) {
+    res.render('reg');
+}
