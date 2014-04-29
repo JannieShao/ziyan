@@ -1,9 +1,9 @@
 html{height:100%}
 body{margin:0;padding:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;height:100%;background-color:#eee}
-.top_nav{background:url("/images/top_bg.jpg") repeat;height:45px;width:100%;position:fixed;font-size:18px;color:#fff;margin:0;padding:0;z-index:100;}
-.top_nav p{padding-top:9px;padding-left:10px}
+.top_nav{background:url("/images/top_bg.png") repeat;height:45px;width:100%;position:fixed;font-size:18px;color:#fff;margin:0;padding:0;z-index:100;}
+.top_nav p{padding-left:10px}
 .admin_container{width:100%;padding-top:45px;border-style:solid;border-width:0;border-color:#357ebd;min-width:600px;height:100%}
-.left{background:url("/img/left_bg.jpg") repeat;height:100%;width:175px;float:left;position:fixed;}
+.left{background:url("/images/left_bg.jpg") repeat;height:100%;width:175px;float:left;position:fixed;}
 .left ul{margin-top:30px;}
 .left ul li{list-style:none;line-height:40px;}
 .left ul li a{color:#808080;}
@@ -16,8 +16,8 @@ body{margin:0;padding:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
 #meeting_room,#permission,#book_msg{height:100%}
 .r_container{position:relative;width:100%;height:100%;background-color:#eee;border-radius:15px}
 .admin_right_to_center{min-width:900px;max-width:1400px;height:100%;margin:auto}
-.welcome{margin:15px 20px 0 20px;color:#b7b7b8;}
+/*.welcome{margin:15px 20px 0 20px;color:#b7b7b8;}
 .welcome span{margin:5px}
 .welcome a{color:#808080;float:right}
-.welcome a:hover{color:#fff;text-decoration:none}
+.welcome a:hover{color:#fff;text-decoration:none}*/
 hr{border-color:#4b4d4e}
