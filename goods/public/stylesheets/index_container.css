@@ -1,6 +1,6 @@
 /*container*/
 i {
-    margin: 0px 5px;
+    margin: 0px 8px;
 }
 .content {   
     min-width: 980px;
@@ -26,13 +26,22 @@ i {
 .books,.shuma,.computer,.cards,.plays,.decoration,.shoes,.clothes,.sports,.girls,.boys {
     width: 100%;
 }
-.softs_span {
-    background-color:#15B69A; 
+.main_left_title,.softs_span {     
     width:100%;
     margin:auto;
-    padding:8px 0px;
+   
+}
+.main_left_title{
+    background-color:#15B69A;
+    font-weight: bold;
+    color:#fff;
     text-align: center;
-    color:#fff;   
+    padding:8px 0px;
+}
+.softs_span {
+    background-color: #e5e5e5;
+    color:#5f9ea0;
+    line-height: 26px;    
 }
 .main_left ul {
     margin:0px;
@@ -141,7 +150,7 @@ i {
 .main_right_dyn ul li,.main_right_sell ul li {
     list-style: none;
     margin:0px;
-    padding:5px 0px; 
+    padding:8px 0px; 
 }
 .main_right_dyn ul li i,.main_right_sell ul li i {
     color:#3cb371;
