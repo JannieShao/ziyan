@@ -1,0 +1,10 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"font_size": 14,
+	"ignored_packages":
+	[
+		"Vintage",
+		"Jade"
+	],
+	"translate_tabs_to_spaces": true
+}
