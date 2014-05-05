@@ -5,6 +5,7 @@ body {
     padding: 0px;
     margin: 0px;
     background-color: #F5F3F2;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 a {
     text-decoration: none;
@@ -45,7 +46,7 @@ img{
     z-index: 100;
 }
 .top_show {
-    width: 1240px;
+    width: 1024px;
     margin: auto;    
 }
 .top_user {
@@ -195,7 +196,7 @@ img{
 .soft_show_all {
     width:100%;
     position: absolute;
-    display: inline;
+    display: none;
     z-index: 80;
 }
 .softs {

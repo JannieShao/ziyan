@@ -7,7 +7,7 @@ i {
     text-align: center;
 }
 .main{
-    width: 1240px;
+    width: 1024px;
     height: 1400px;
     padding-top: 10px;
     margin: auto;
@@ -15,7 +15,7 @@ i {
 }
 .main_left {
     position: relative;
-    width: 200px;
+    width: 150px;
     height: auto;
     border-width: 1px;
     border-color: #5f9ea0;
@@ -55,11 +55,12 @@ i {
     width:90px;
     float:left;
     text-align: center;
+    font-size: 12px;
 }
 /*  main middle */
 .main_middle{
     position: relative;
-    width:840px;
+    width:735px;
     padding:0px 5px;
     float:left;
 }
@@ -87,7 +88,7 @@ i {
 }
 .main_middle_center_ul ul li{
     float:left;
-    margin:20px 0px 20px 35px;
+    margin:20px 4px;
     list-style: none;
 }
 .main_middle_center ul li img{
@@ -121,13 +122,11 @@ i {
 /* main right */
 .main_right {
     position: relative;
-    width: 180px;
+    width: 125px;
     height: 800px;
     float:left;
 }
 .main_right_dyn,.main_right_sell {
-/*    border:1px solid #5f9ea0;
-    border-radius: 5px;*/
     margin-bottom: 5px;
 }
 .main_right_dyn,.main_right_sell{
@@ -150,7 +149,8 @@ i {
 .main_right_dyn ul li,.main_right_sell ul li {
     list-style: none;
     margin:0px;
-    padding:8px 0px; 
+    padding:8px 0px;
+    font-size: 12px; 
 }
 .main_right_dyn ul li i,.main_right_sell ul li i {
     color:#3cb371;

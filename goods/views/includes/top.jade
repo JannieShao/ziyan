@@ -20,6 +20,7 @@ html(lang="zh-cn")
 
         script(type="text/javascript", src="/vendor/jquery/jquery-2.1.0.min.js")
         script(src="/vendor/bootstrap/js/bootstrap.min.js",type="text/javascript")
+        script(type="text/javascript", src="/javascripts/main.js")
         block head
     body
         .top
@@ -55,49 +56,50 @@ html(lang="zh-cn")
                 ul.clearfix
                     li.all_softs                         
                         a(href="#") 全部分类
+                        .soft_show_all
+                            .top_show
+                                .softs 
+                                    #books.clearfix 
+                                        .softs_span 
+                                            i.icon-book
+                                            span 书 籍
+                                    #shuma.clearfix
+                                        .softs_span
+                                            i.icon-camera-retro
+                                            span 数 码
+                                    #computer.clearfix
+                                        .softs_span
+                                            i.icon-desktop
+                                            span 电脑及周边
+                                    #cards.clearfix
+                                        .softs_span
+                                            i.icon-credit-card
+                                            span 卡/票/证
+                                    #plays.clearfix
+                                        .softs_span
+                                            i.icon-dashboard
+                                            span 休闲娱乐
+                                    #decoration.clearfix
+                                        .softs_span
+                                            i.icon-github-alt
+                                            span 饰品/手表
+                                    #shoes.clearfix
+                                        .softs_span
+                                            i.icon-suitcase
+                                            span 鞋 包
+                                    #clothes.clearfix
+                                        .softs_span 服 装
+                                    #sports.clearfix
+                                        .softs_span 体育用品
+                                    #girls.clearfix
+                                        .softs_span 女生专区
+                                    #boys.clearfix
+                                        .softs_span 男生专区
+
                     li
                         a(href="/index") 首页
                     li 
                         a(href="#") 帮助
-        .soft_show_all
-            .top_show
-                .softs 
-                    #books.clearfix 
-                        .softs_span 
-                            i.icon-book
-                            span 书 籍
-                    #shuma.clearfix
-                        .softs_span
-                            i.icon-camera-retro
-                            span 数 码
-                    #computer.clearfix
-                        .softs_span
-                            i.icon-desktop
-                            span 电脑及周边
-                    #cards.clearfix
-                        .softs_span
-                            i.icon-credit-card
-                            span 卡/票/证
-                    #plays.clearfix
-                        .softs_span
-                            i.icon-dashboard
-                            span 休闲娱乐
-                    #decoration.clearfix
-                        .softs_span
-                            i.icon-github-alt
-                            span 饰品/手表
-                    #shoes.clearfix
-                        .softs_span
-                            i.icon-suitcase
-                            span 鞋 包
-                    #clothes.clearfix
-                        .softs_span 服 装
-                    #sports.clearfix
-                        .softs_span 体育用品
-                    #girls.clearfix
-                        .softs_span 女生专区
-                    #boys.clearfix
-                        .softs_span 男生专区
-
+        
 
         block main
