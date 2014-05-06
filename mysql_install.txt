@@ -1,0 +1,12 @@
+1 apt-get install mysql-server
+2 vim /etc/mysql/my.cnf
+3 comment out 
+  bind-address            = 127.0.0.1
+4 add line in [mysqld]
+  default-storage-engine  = INNODB
+5 mysql -p
+  password: 123456
+  mysql> use mysql;
+  mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+  mysql> FLUSH PRIVILEGES;
+6 /etc/init.d/mysql restart
