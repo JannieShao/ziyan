@@ -1,0 +1,19 @@
+doctype html
+html(lang="zh-cn")
+    head
+        meta(charset="utf-8")
+        meta(name="description", content="添加分类")
+        meta(name="author", content="ziyan")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="robots", content="noindex, nofollow")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title 添加分类
+        script(type="text/javascript", src="/javascripts/meeting/login/main.js")
+    body
+        form(method="post", action="/add_sort")
+            input(type="text", name="sort_a")
+            input(type="text", name="sort_b")
+            input(type="text", name="sort_c")
+            input(type="text", name="sort_d")
+            button(type="submit") 添加
+

@@ -1,9 +1,15 @@
 $(document).ready(function(){
 
-    $(".all_softs").hover(function(){
-        $(".soft_show_all").css("display", "block");
+    $(".top_all_softs").hover(function(){
+        $(".top_soft_show_all").css("display", "block");
     },function(){
-        $(".soft_show_all").css("display", "none");
+        $(".top_soft_show_all").css("display", "none");
+    })
+
+    $("#top_books").hover(function(){
+        $(".book_all").css("display", "block");
+    },function(){
+        $(".book_all").css("display", "none");
     })
 
 })

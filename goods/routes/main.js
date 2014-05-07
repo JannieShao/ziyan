@@ -24,3 +24,8 @@ exports.admin = function(req, res) {
 exports.reg = function(req, res) {
     res.render('reg');
 }
+
+//用于手动添加分类的工具
+exports.tools_add_sorts = function(req, res) {
+    res.render('tools/addsort');
+}

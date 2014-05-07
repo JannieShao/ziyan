@@ -172,56 +172,102 @@ img{
 }
 .top_menu ul li{
     list-style: none;
+    height:40px;
     float:left;
-    padding:11px 10px 13px 10px;    
+    padding-right:10px;
+    padding-left: 10px;
+    line-height: 40px;    
 }
 .top_menu ul li:hover{
-    background-color:#15B69A;    
+    background-color:#15B69A;
+    /*cursor:pointer;*/    
 }
 .top_menu ul li a {
     padding:11px 10px 13px 10px;
+    width:100%;
+    height:100%;
+    line-height: 100%;
+    margin:0px;
+    padding:0px;
     color:#fff;
+
 }
-.all_softs {
+.top_all_softs {
     width:180px;
     height:100%;
     text-align: center; 
     margin:0px;
     padding:0px; 
     background: url("../images/top_menu_bg.png") 140px 0px no-repeat;
+    z-index: 80; 
 }
-.all_softs:hover {
+.top_all_softs:hover {
     background: url("../images/top_menu_bg.png") 140px -40px no-repeat;
+    cursor: pointer;
 }
-.soft_show_all {
-    border-color: #15B69A;
-    border-style: solid;
-
+.top_soft_show_all {
     position: relative;
     display: none;
-    margin-left:-10px;
-    z-index: 50;
+    width: 100%;
+    padding:0px;
+    background-color:#14c69A;
+    z-index: 80;
 }
-.softs {
-    border-color: #15B69A;
-    border-style: solid;
+.top_softs {
     border-radius: 5px;
-    background-color: #e5e5e5;
-    width:410px;
-    margin:0px;
-    padding: 0px;  
+    width:100%;
+    height:26px;
+    margin-left:-10px;
+    line-height: 26px;  
 }
-#books,#shuma,#computer,
-#cards,#plays,#decoration,
-#shoes,#clothes,#sports,
-#girls,#boys {
-    width: 100px;
+#top_books,#top_shuma,#top_computer,
+#top_cards,#top_plays,#top_decoration,
+#top_shoes,#top_clothes,#top_sports,
+#top_girls,#top_boys {
+    width: 100%;
     font-size: 12px;
     border-color: #15B69A;
     border-style: solid;
     border-width: 1px;
+    color:#fff;
+    background-color:#14c69A;
+    margin:0px;
+    padding:0px 9px;
 }
-.softs .softs_span {     
+#top_books:hover,#top_shuma:hover,#top_computer:hover,
+#top_cards:hover,#top_plays:hover,#top_decoration:hover,
+#top_shoes:hover,#top_clothes:hover,#top_sports:hover,
+#top_girls:hover,#top_boys:hover {
+    background-color:#e5e5e5;
     color:#5f9ea0;
-    line-height: 26px;    
+    cursor: pointer;
+}
+.soft_left_icon{
+    float:left;
+    height:100%;
+    line-height: 100%;
+    padding:8px 8px 8px 20px;
+}
+.soft_right_icon {
+    float:right;
+    padding:8px 20px 8px 8px;
+}
+.book_all {
+    border-color: #15B69A;
+    border-style: solid;
+    border-width: 1px;
+    border-left: none;
+    display: none;
+    position: absolute;
+    background-color:#e5e5e5;
+    width:200px;
+    margin-top:-26px;
+    margin-left:105%;
+    padding:0px;
+    float:left;
+    cursor: auto;
+    font-weight: normal; 
+}
+.book_all span {
+    border-bottom: #e5e6e6 1px solid;
 }

@@ -62,8 +62,10 @@ CREATE TABLE IF NOT EXISTS goods(
 
 CREATE TABLE IF NOT EXISTS sorts(
     sort_id         int             auto_increment,
-    sort_name       varchar(64)     NOT NULL,
-    s_name          varchar(64),
+    s_name_a       varchar(64)     NOT NULL,
+    s_name_b       varchar(64),
+    s_name_c        varchar(64),
+    s_name_d        varchar(64),
     primary key (sort_id)
 );
 

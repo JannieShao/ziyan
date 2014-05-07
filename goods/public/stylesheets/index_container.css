@@ -23,13 +23,12 @@ i {
     border-radius: 5px;
     float:left;    
 }
-.books,.shuma,.computer,.cards,.plays,.decoration,.shoes,.clothes,.sports,.girls,.boys {
+.main_soft {
     width: 100%;
 }
 .main_left_title,.softs_span {     
     width:100%;
     margin:auto;
-   
 }
 .main_left_title{
     background-color:#15B69A;
@@ -46,13 +45,16 @@ i {
 .main_left ul {
     margin:0px;
     padding:0px;
+    width: 100%;
 
 }
 .main_left ul li{
     list-style: none;
-    margin:5px;
+    margin:0px;
     padding:0px;
-    width:90px;
+    width:50%;
+    height:25px;
+    line-height: 25px;
     float:left;
     text-align: center;
     font-size: 12px;

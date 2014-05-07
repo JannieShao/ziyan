@@ -5,6 +5,9 @@
 
 var express = require('express');
 var routes = require('./routes/main');
+var tools = require('./routes/tools');
+
+
 //var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
@@ -34,6 +37,11 @@ app.get('/index', routes.index);
 app.get('/login', routes.login);
 app.get('/admin', routes.admin);
 app.get('/register', routes.reg);
+
+
+//手动添加分类信息
+app.post('/add_sort', tools.add_sorts);
+app.get('/tools/addsort', routes.tools_add_sorts)
 
 
 http.createServer(app).listen(app.get('port'), function(){

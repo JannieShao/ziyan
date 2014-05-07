@@ -1,11 +1,11 @@
-var conn = require("./connection")
+var conn = require("./conn/connection")
 
 var test_select = function(cb){
     var sql = "select * from sorts;"
     conn.exec_sql(sql, cb)
 }
 var test_insert  = function(cb){
-    var sql = "insert into sorts(sort_name,s_name) values('教材','基础课程')"
+    var sql = "insert into sorts(sort_name,s_name) values('教材','基础课程');"
     conn.exec_sql(sql, cb)
 }
 var test_del = function(id, cb){
