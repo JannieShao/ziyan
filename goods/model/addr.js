@@ -24,3 +24,12 @@ exports.addr_select_by_status = function(args, cb) {
 }
 
 //update
+exports.addr_update_status = function(args, cb) {
+    var sql = "update address set status = "+args.status+" where addr_id = "+args.addr_id+";"
+    conn.exec_sql(sql, cb)
+}
+//delete
+exports.addr_del = function(id, cb) {
+    var sql = "delete from address where addr_id = "+id+";"
+    conn.exec_sql(sql, cb)
+}

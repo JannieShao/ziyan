@@ -1,2 +1,4 @@
 http://www.ztree.me/v3/main.php#_zTreeInfo
 
+https://github.com/blueimp/jQuery-File-Upload/wiki/API
+

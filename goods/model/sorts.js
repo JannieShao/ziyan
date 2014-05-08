@@ -17,7 +17,7 @@ exports.sorts_show_all = function(cb) {
     conn.exec_sql(sql, cb)
 }
 //使用编号查询分类
-exports.sorts_select_by_id = function(id，cb) {
+exports.sorts_select_by_id = function(id, cb) {
     var sql = "select * from sorts where sort_id = "+id+";"
     conn.exec_sql(sql, cb)
 }
@@ -39,5 +39,10 @@ exports.sorts_select_c_by_b = function(sort_b, cb) {
 //使用三级类别查询四级分类
 exports.sorts_select_d_by_c = function(sort_c, cb) {
     var sql = "select s_name_d from sorts where s_name_c = '"+sort_c+"';"
+    conn.exec_sql(sql, cb)
+}
+
+exports.sorts_select_id_by_a = function(sort_a, cb) {
+    var sql = "select sort_id from sorts where s_name_a = '"+sort_a+"';"
     conn.exec_sql(sql, cb)
 }

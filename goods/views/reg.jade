@@ -3,7 +3,13 @@ append main
     .content
         .main
             .reg_form 新用户注册
-                form(action="/reg", method="post")
+                form.(action="/reg", method="post")
+                    input(type="text",name="nick",maxlength="12",required, autofocus)
+                    input(type="password",name="pwd",maxlength="24",required)
+                    input(type="password",name="repwd",maxlength="24",required)
+                    input(type="text",name="email",required)
+                    button(type="reset")#undo.reg_button 取消
+                    button(type="submit").reg_button 注册
 
 //---------------------------------------------------------------------------
 append head
