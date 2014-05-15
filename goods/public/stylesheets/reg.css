@@ -1,3 +1,43 @@
 .reg_form {
-    
+    width:400px;
+    margin:auto;
+}
+h2 {
+    margin-left:90px;
+}
+table {
+    width:380px;
+    margin: auto;
+}
+table tr {
+    vertical-align: middle;
+}
+table tr td {
+    height:32px;
+    vertical-align: middle;
+}
+.title {
+    width:70px;
+}
+.reg_form input {
+    width:164px;
+    height:24px;
+    border-radius: 3px;
+}
+.nick_err,.nick_ok,.pwd_err,.pwd_ok,.repwd_err,.repwd_ok,.email_err,.email_ok {
+    display: none;
+}
+.prompt {
+    width:100px;
+}
+.btn_div {
+    margin-left:80px;
+}
+.reg_button {
+    background-color: #15B69A;
+    border-color:#15B69A;
+    border-radius: 5px;
+    width:65px;
+    margin:5px;
+    cursor:pointer;
 }

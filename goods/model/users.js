@@ -19,7 +19,7 @@ exports.user_select_err = function(cb) {
     conn.exec_sql(sql, cb)
 }
 
-exports.user_select_all = function(cb) {
+exports.user_select_all_order = function(cb) {
     var sql = "select * from users order by points desc;"
     conn.exec_sql(sql, cb)
 }

@@ -2,15 +2,63 @@ extends ./includes/top
 append main
     .content
         .main
-            .reg_form 新用户注册
-                form.reg(action="/reg", method="post")
-                    input(type="text",name="nick",maxlength="12",required, autofocus)
-                    input(type="password",name="pwd",maxlength="24",required)
-                    input(type="password",name="repwd",maxlength="24",required)
-                    input(type="text",name="email",required)
-                    button(type="reset")#undo.reg_button 取消
-                    button(type="submit").reg_button 注册
+            .reg_form 
+                h2 新用户注册
+                form(action="/reg", method="post")
+                    table.reg
+                        tr
+                            td.title 昵称：
+                            td
+                                input.nick(type="text",name="nick",maxlength="12",required, autofocus)
+                            td.prompt
+                                span.nick_err nick_err
+                                span.nick_ok nick_ok
+                        tr
+                            td.title 密码：
+                            td
+                                input.pwd(type="password",name="pwd",maxlength="24",required)
+                            td.prompt
+                                span.pwd_err pwd_err
+                                span.pwd_ok pwd_ok
+                        tr
+                            td.title 确认密码：
+                            td
+                                input.repwd(type="password",name="repwd",maxlength="24",required)
+                            td.prompt
+                                span.repwd_err repwd_err
+                                span.repwd_ok repwd_ok
+                        tr
+                            td.title 邮箱：
+                            td
+                                input.email(type="text",name="email",required)
+                            td.prompt
+                                span.email_err email_err
+                                span.email_ok email_ok
+                    //.nick_div
+                    //    span.title 昵称：
+                    //    input.nick(type="text",name="nick",maxlength="12",required, autofocus)
+                    //    span.nick_err nick_err
+                    //    span.nick_ok nick_ok
+                    //.pwd_div
+                    //    span.title 密码：
+                    //    input.pwd(type="password",name="pwd",maxlength="24",required)
+                    //    span.pwd_err pwd_err
+                    //    span.pwd_ok pwd_ok
+                    //.repwd_div
+                    //    span.title 确认密码：
+                    //    input.repwd(type="password",name="repwd",maxlength="24",required)
+                    //    span.repwd_err repwd_err
+                    //    span.repwd_ok repwd_ok
+                    //.email_div
+                    //    span.title 邮箱：
+                    //    input.email(type="text",name="email",required)
+                    //    span.email_err email_err
+                    //    span.email_ok email_ok
+                    .btn_div
+                        button(type="reset")#undo.reg_button 取消
+                        button(type="submit")#do_reg.reg_button 注册
 
 //---------------------------------------------------------------------------
 append head
     link(rel="stylesheet", href="/stylesheets/reg.css",type="text/css")
+    script(type="text/javascript", src="/javascripts/reg.js")

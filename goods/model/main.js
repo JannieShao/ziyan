@@ -37,7 +37,7 @@ var conn = require("./conn/connection")
 // })
 
 
-//测试插入订单
+// 测试插入订单
 // var order_add = function(args, cb) {
 //     var sql = "insert into orders(user_id,addr_id) values("+args.order.user_id+","+args.order.add_id+");"
 //     sql += "insert into orders_msg(order_id,good_id,sum,price) values"
@@ -71,20 +71,20 @@ var conn = require("./conn/connection")
 // })
 
 
-var order_delete = function(id, cb) {
-    var sql = "delete from orders where order_id = "+id+";"
-    sql += "delete from orders_msg where order_id = "+id+";"
-    conn.exec_sql(sql, cb)
-}
+// var order_delete = function(id, cb) {
+//     var sql = "delete from orders where order_id = "+id+";"
+//     sql += "delete from orders_msg where order_id = "+id+";"
+//     conn.exec_sql(sql, cb)
+// }
 
-order_delete(14, function(err, rows){
-    console.log(">>>>>>>>>>>>>delete order success")
-})
+// order_delete(14, function(err, rows){
+//     console.log(">>>>>>>>>>>>>delete order success")
+// })
 
 var order_select_all = function(cb) {
     var sql = "select * from orders_msg;"
     conn.exec_sql(sql, cb)
 }
 order_select_all(function(err, rows){
-    console.log(rows)
+    console.log(">>>>>"+rows)
 })

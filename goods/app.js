@@ -6,6 +6,7 @@
 var express = require('express');
 var routes = require('./routes/main');
 var tools = require('./routes/tools');
+var do_reg = require('./routes/reg');
 
 
 //var user = require('./routes/user');
@@ -36,7 +37,12 @@ if ('development' == app.get('env')) {
 app.get('/index', routes.index);
 app.get('/login', routes.login);
 app.get('/admin', routes.admin);
+
+//注册相关
 app.get('/register', routes.reg);
+app.post('/reg', do_reg.reg);
+app.post('/do_check_nick/:nick', do_reg.check_nick);
+app.post('/do_check_email/:email', do_reg.check_email);
 
 
 //手动添加分类信息

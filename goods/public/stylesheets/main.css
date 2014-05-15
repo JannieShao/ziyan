@@ -271,3 +271,16 @@ img{
 .book_all span {
     border-bottom: #e5e6e6 1px solid;
 }
+
+.content {   
+    min-width: 980px;
+    text-align: center;
+}
+
+.main{
+    width: 1124px;
+    height: 1400px;
+    padding-top: 20px;
+    margin: auto;
+    text-align: left;
+}
