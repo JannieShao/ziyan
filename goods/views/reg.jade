@@ -4,33 +4,29 @@ append main
         .main
             .reg_form 
                 h2 新用户注册
-                form(action="/reg", method="post")
+                form.form_reg(role="form", action="/reg", method="post")
                     table.reg
                         tr
-                            td.title 昵称：
                             td
-                                input.nick(type="text",name="nick",maxlength="12",required, autofocus)
+                                input.nick(type="text",name="nick",placeholder="昵称",maxlength="20",required, autofocus)
                             td.prompt
                                 span.nick_err nick_err
                                 span.nick_ok nick_ok
                         tr
-                            td.title 密码：
                             td
-                                input.pwd(type="password",name="pwd",maxlength="24",required)
+                                input.pwd(type="password",name="pwd",placeholder="密码",maxlength="12",required)
                             td.prompt
                                 span.pwd_err pwd_err
                                 span.pwd_ok pwd_ok
                         tr
-                            td.title 确认密码：
                             td
-                                input.repwd(type="password",name="repwd",maxlength="24",required)
+                                input.repwd(type="password",name="repwd",placeholder="确认密码", axlength="12",required)
                             td.prompt
                                 span.repwd_err repwd_err
                                 span.repwd_ok repwd_ok
                         tr
-                            td.title 邮箱：
                             td
-                                input.email(type="text",name="email",required)
+                                input.email(type="text",name="email",placeholder="邮箱", required)
                             td.prompt
                                 span.email_err email_err
                                 span.email_ok email_ok

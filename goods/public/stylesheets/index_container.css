@@ -26,7 +26,8 @@ i {
 .main_soft {
     width: 100%;
 }
-.main_left_title,.softs_span {     
+.main_left_title,
+.softs_span {     
     width:100%;
     margin:auto;
 }
@@ -96,13 +97,16 @@ i {
 .main_middle_center ul li img{
     width:230px;
 }
-.goods_name,.goods_price,.goods_ower {
+.goods_name,
+.goods_price,
+.goods_ower {
     font-size:12px;
     margin-top:10px;
     width:225px;
     line-height:15px;
 }
-.span1,.span2{
+.span1,
+.span2{
     font-size:16px;
 }
 .span2{
@@ -114,7 +118,8 @@ i {
     font-size:13px;
     color:#969696;
 }
-.span4,.span5{
+.span4,
+.span5{
     font-size:13px;
     color:#4f4f4f;
 }
@@ -128,10 +133,12 @@ i {
     height: 800px;
     float:left;
 }
-.main_right_dyn,.main_right_sell {
+.main_right_dyn,
+.main_right_sell {
     margin-bottom: 5px;
 }
-.main_right_dyn,.main_right_sell{
+.main_right_dyn,
+.main_right_sell{
     width:100%;
     border-bottom:2px solid #5f9ea0;
     height:auto;
@@ -139,21 +146,25 @@ i {
 .main_right_sell {
     margin-top: 10px;
 }
-.dyn_title,.msg_title {
+.dyn_title,
+.msg_title {
     border-bottom:2px solid #5f9ea0; 
     width:100%;
     padding:5px 0px;
     text-align: center;
 }
-.main_right_dyn ul,.main_right_sell ul {
+.main_right_dyn ul,
+.main_right_sell ul {
     padding:0px;    
 }
-.main_right_dyn ul li,.main_right_sell ul li {
+.main_right_dyn ul li,
+.main_right_sell ul li {
     list-style: none;
     margin:0px;
     padding:8px 0px;
     font-size: 12px; 
 }
-.main_right_dyn ul li i,.main_right_sell ul li i {
+.main_right_dyn ul li i,
+.main_right_sell ul li i {
     color:#3cb371;
 }

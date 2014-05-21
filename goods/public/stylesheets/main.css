@@ -50,6 +50,9 @@ img{
     width: 1124px;
     margin: auto;    
 }
+.login_err {
+    display: none;
+}
 .top_user {
     float:left;
 }
@@ -63,6 +66,9 @@ img{
     list-style: none;
     float: left;
     margin: 0px 5px;
+}
+.msg_num {
+    color:#aa584d;
 }
 .top_right {
     float: right;
@@ -85,6 +91,7 @@ img{
     color: #aa584d;
     font-weight: bold;
     font-size: 16px;
+    margin:0px 3px;
 }
 .car_text:hover {
     color:#3cb371;
@@ -221,10 +228,17 @@ img{
     margin-left:-10px;
     line-height: 26px;  
 }
-#top_books,#top_shuma,#top_computer,
-#top_cards,#top_plays,#top_decoration,
-#top_shoes,#top_clothes,#top_sports,
-#top_girls,#top_boys {
+#top_books,
+#top_shuma,
+#top_computer,
+#top_cards,
+#top_plays,
+#top_decoration,
+#top_shoes,
+#top_clothes,
+#top_sports,
+#top_girls,
+#top_boys {
     width: 100%;
     font-size: 12px;
     border-color: #15B69A;
@@ -235,10 +249,17 @@ img{
     margin:0px;
     padding:0px 9px;
 }
-#top_books:hover,#top_shuma:hover,#top_computer:hover,
-#top_cards:hover,#top_plays:hover,#top_decoration:hover,
-#top_shoes:hover,#top_clothes:hover,#top_sports:hover,
-#top_girls:hover,#top_boys:hover {
+#top_books:hover,
+#top_shuma:hover,
+#top_computer:hover,
+#top_cards:hover,
+#top_plays:hover,
+#top_decoration:hover,
+#top_shoes:hover,
+#top_clothes:hover,
+#top_sports:hover,
+#top_girls:hover,
+#top_boys:hover {
     background-color:#e5e5e5;
     color:#5f9ea0;
     cursor: pointer;

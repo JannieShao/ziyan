@@ -8,7 +8,7 @@ USE goods;
 CREATE TABLE IF NOT EXISTS users(
     user_id         int            auto_increment,
     nick_name       varchar(64)    NOT NULL,
-    password        varchar(24)    NOT NULL,
+    password        varchar(128)    NOT NULL,
     email           varchar(128)    NOT NULL,
     points          int            default '0',
     name            varchar(24),

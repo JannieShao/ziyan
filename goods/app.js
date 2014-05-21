@@ -6,6 +6,9 @@ var express = require('express');
 var routes = require('./routes/main');
 var tools = require('./routes/tools');
 var do_reg = require('./routes/reg');
+var do_login = require('./routes/login');
+
+// var set_cookies = require('./routes/do_cookies')
 
 
 //var user = require('./routes/user');
@@ -19,14 +22,26 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
+
+app.use(express.cookieParser());
+
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(express.bodyParser());
+
+// app.use(function(req, res, next){
+//     set_cookies.show_msg_total     
+//     next()
+// })
+// app.use(function(req, res, next){
+//     set_cookies.show_car_total      
+// })
 
 // development only
 if ('development' == app.get('env')) {
@@ -35,7 +50,9 @@ if ('development' == app.get('env')) {
 
 app.get('/index', routes.index);
 app.get('/login', routes.login);
+app.post('/do_login', do_login.login);
 app.get('/admin', routes.admin);
+app.get('/user', routes.user);
 
 //注册相关
 app.get('/register', routes.reg);

@@ -38,6 +38,16 @@ exports.msg_select_by_to_status = function(args, cb) {
     conn.exec_sql(sql, cb)
 }
 
+exports.msg_total_by_from = function(id, cb) {
+    var sql = "select count(msg_id) as total from message where from_id ="+id+";"
+    conn.exec_sql(sql, cb)
+}
+
+exports.msg_total_by_to = function(id, cb) {
+    var sql = "select count(msg_id) as total from message where user_id ="+id+" and msg_status =0;"
+    conn.exec_sql(sql, cb)
+}
+
 //update
 exports.msg_update_status = function(args, cb) {
     var sql = "update message set msg_status = "+args.status+" where msg_id = "+args.id+";"

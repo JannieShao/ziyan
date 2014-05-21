@@ -82,10 +82,26 @@ var conn = require("./conn/connection")
 //     console.log(">>>>>>>>>>>>>delete order success")
 // })
 
-var order_select_all = function(cb) {
-    var sql = "select * from orders_msg;"
+// var order_select_all = function(cb) {
+//     var sql = "select * from orders_msg;"
+//     conn.exec_sql(sql, cb)
+// }
+// order_select_all(function(err, rows){
+//     console.log(">>>>>"+rows)
+// })
+
+
+var msg_total_by_to = function(id, cb) {
+    var sql = "select count(msg_id) as total from message where user_id ="+id+" and msg_status =0;"
     conn.exec_sql(sql, cb)
 }
-order_select_all(function(err, rows){
-    console.log(">>>>>"+rows)
+
+var total;
+
+msg_total_by_to(1, function(err, rows) {
+    total = rows[0].total
+    run()
 })
+function run(){
+    console.log(">>>>>"+total)
+}

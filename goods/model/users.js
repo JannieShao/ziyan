@@ -32,6 +32,10 @@ exports.user_select_by_nickname = function(nickname, cb) {
     var sql = "select * from users where nick_name = '"+nickname+"';"
     conn.exec_sql(sql, cb)
 }
+exports.user_select_by_n_p = function(args, cb) {
+    var sql = "select * from users where nick_name = '"+args.nick+"' and password = '"+args.password+"';"
+    conn.exec_sql(sql, cb)
+}
 exports.user_select_by_email = function(email, cb) {
     var sql = "select * from users where email = '"+email+"';"
     conn.exec_sql(sql, cb)

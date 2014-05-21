@@ -1,27 +1,5 @@
-exports.set_cookies = function(res, key, value, options) {
-    if (typeof value == 'string') {
-        options.no_encoding = true
-        var cookie = res.cookie(key, value, options)
-        return cookie
-    }
+var crypto = require('crypto')
 
-    if (typeof value == 'object') {
-        var val = ''
-        for (var k in value) {
-            if (val == '') {
-                val = k + '=' + value[k]
-            }
-            else {
-                val = val + '&' + k + '=' + value[k]
-            }
-        }
-
-        options.no_encoding = true
-        var cookie = res.cookie(key, val, options)
-
-        return cookie
-    }
-}
 //--------------------------------------------------------------------------------------------------------
 exports.check_name = function(name) {
     var re = /^[\u4e00-\u9fa5]{2,4}$/
@@ -116,33 +94,8 @@ exports.is_date_string = function(str){
     return err
 }
 
-//------------------
-exports.encrypt_3des = function(text, secret_key){
-    var assert = require('assert')
-    var crypto = require('crypto')
-    var Buffer = require('buffer').Buffer
-    var ENCODING = 'base64'
-
-    var cipher = crypto.createCipher('des-ede', secret_key)
-    var cryptedPassword = cipher.update(text, 'utf8',ENCODING)
-    cryptedPassword+= cipher.final(ENCODING)
-
-    return cryptedPassword
-}
-//---------------------------------------------------------------------------------------------------------
-exports.dencrypt_3des = function(text, secret_key){
-    var assert = require('assert')
-    var crypto = require('crypto')
-    var Buffer = require('buffer').Buffer
-    var ENCODING = 'base64'
-
-    var decipher = crypto.createDecipher('des-ede', secret_key)
-    var decryptedPassword = decipher.update(text, ENCODING,'utf8')
-    decryptedPassword += decipher.final('utf8')
-
-    return decryptedPassword
-}
 exports.encrypt_by_md5 = function(plaintext) {
+
     var md5 = crypto.createHash('md5')
     md5.update(plaintext, "utf8")
     return md5.digest("hex")

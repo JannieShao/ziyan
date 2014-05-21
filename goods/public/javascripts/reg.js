@@ -68,6 +68,7 @@ $(document).ready(function() {
         if(pwd !== repwd) {
             $(this).attr("type", "text")
             $(this).val("两次输入密码不同").css("color", "#FF4040")
+            $('.repwd_ok').css("display", "none")
             $('.repwd_err').css("display", "block")
         } else {
             $('.repwd_err').css("display", "none")
@@ -121,10 +122,10 @@ $(document).ready(function() {
         }
     })
 
-    $("#do_reg").submit("post",function(event) {
+    $(".form_reg").submit(function(event) {
         $self = $(this);
-
-        $.post({
+        //alert(">>>here")
+        $.ajax({
             type : $self.attr('method'),
             url  : $self.attr('action'),
             data : $self.serialize(),

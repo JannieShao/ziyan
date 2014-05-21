@@ -1,0 +1,73 @@
+extends ../includes/top
+
+append main
+    .content
+        .main
+            .left
+                .welcome
+                    span 我的校易通
+                ul
+                    li
+                        a.but_user_center(href="#user_center")
+                            i.user_center_icon.glyphicon.icon-user
+                            span.selected 账户设置
+                    li
+                        a.but_user_car(href="#user_car")
+                            i.user_car_icon.glyphicon.icon-group
+                            span 我的购物车
+                    li
+                        a.but_user_order(href="#user_order")
+                            i.user_order_icon.glyphicon.glyphicon-gift
+                            span 已买到的宝贝
+                    li
+                        a.but_user_addr(href="#user_addr")
+                            i.user_addr_icon.glyphicon.glyphicon-envelope
+                            span 收货地址
+                    - if (user.school)
+                        li
+                            a.but_user_goods(href="#user_goods")
+                                i.user_goods_icon.glyphicon.glyphicon-list-alt
+                                span 我的二手物品
+                        li
+                            a.but_user_needs(href="#user_needs")
+                                i.user_needs_icon.glyphicon.glyphicon-list-alt
+                                span 供需消息管理
+                    li
+                        a.but_user_msg(href="#user_msg")
+                            i.user_msg_icon.glyphicon.glyphicon-envelope
+                            span 站内信
+                    
+
+            #user_right
+                #user_center(style="display:inline")
+                    .r_container
+                        .user_right_to_center
+                            include ./user_center
+                #user_car
+                    .r_container
+                        .user_right_to_center
+                            include ./user_car
+                #user_order
+                    .r_container
+                        .user_right_to_center
+                            include ./user_order
+                #user_addr
+                    .r_container
+                        .user_right_to_center
+                            include ./user_addr
+                #user_goods
+                    .r_container
+                        .user_right_to_center
+                            include ./user_goods
+                #user_needs
+                    .r_container
+                        .user_right_to_center
+                            include ./user_needs
+                #user_msg
+                    .r_container
+                        .user_right_to_center
+                            include ./user_msg
+//-------------------------------------------------------------------------------------
+append head
+    link(rel="stylesheet", href="/stylesheets/users/main.css",type="text/css")
+    script(type="text/javascript", src="/javascripts/users/main.js")

@@ -1,5 +1,6 @@
 var model_users = require('../model/users');
-var u2 = require("./util2");
+var do_cookies = require('./do_cookies');
+var u2 = require('./util2');
 
 exports.check_nick = function(req, res) {
     var nick = req.params.nick
@@ -59,7 +60,7 @@ exports.reg = function(req, res, cb){
     }
     var args = {}
     args.nick_name = nick
-    args.password = pwd
+    args.password = u2.encrypt_by_md5(pwd)
     args.email = email
     model_users.user_add(args, function(err, result){
         //
@@ -67,42 +68,9 @@ exports.reg = function(req, res, cb){
             console.log("reg error")
             return
         } else {
-            console.log("reg sucess")
-            model_users.user_select_by_nickname(nick, function(err, output){
-                if(output.length === 1){
-                    var cookies = {}
-                    cookies.id = output[0].user_id
-                    cookies.nick = output[0].nick_name
-                    cookies.email = output[0].email
-                    cookies.points = output[0].points
-                    cookies.name = output[0].name
-                    cookies.sex = output[0].sex
-                    cookies.birthday = output[0].birthday
-                    cookies.address = output[0].address
-                    cookies.school = output[0].school
+            console.log("new user 【"+nick+"】 reg sucess")
 
-                    var user_str = ''
-                    for(var key in cookies) {
-                        if(typeof cookies[key] === 'function')
-                            continue
-                        if( user_str === '') {
-                            user_str = key + '=' + cookies[key]
-                        }
-                        else {
-                            user_str = user_str + '&' + key + '=' + cookies[key]
-                        }
-                    }
-                    console.log(user_str)
-                    u2.set_cookies(res, 'users', user_str, { domain:"192.168.33.10", path: '/', maxAge : 1000 * 60 * 30 })
-                    console.log(">>>>>>>>>>>>>>set cookies success!")
-                    res.send({reg_ok: 1})
-                }else{
-                    console.log(">>>>>>>>set cookies fail")
-                    res.send({reg_ok: 0})
-                }                
-            })
-            //res.render('main', { nick : nick})
-            
+            do_cookies.set_cookie_users_nick(nick, res)            
         }
     })
 

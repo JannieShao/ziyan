@@ -28,11 +28,19 @@ html(lang="zh-cn")
     body
         .top
             .top_show
-                - if(log)
+                input.login_err(value="#{login_err}")
+                - if(if_log)
                     ul.top_user.clearfix
                         li #{user.nick}
                         li
-                            a(href = "#") 消息
+                            a(href = "/user") 【个人中心】
+                        li
+                            a(href = "#") 【消息
+                                - if(user.new_msg_total)
+                                    span.msg_num (#{user.new_msg_total})
+                            】
+                        li
+                            a.logout(href = "#") 退出
                 - else
                     ul.top_user.clearfix
                         li 亲，请
@@ -42,8 +50,11 @@ html(lang="zh-cn")
                 .top_right
                     .car_div
                         a(href="#")
-                            span.car_text 购物车 
-                            span.car 0  
+                            span.car_text 购物车
+                            - if(if_log) 
+                                span.car #{user.car_total}
+                            - else
+                                span.car 0
                         span.kfc |   
                             a(href="#") 客户服务
         .top_search
@@ -125,3 +136,4 @@ html(lang="zh-cn")
         
 
         block main
+

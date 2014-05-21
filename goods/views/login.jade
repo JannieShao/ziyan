@@ -3,12 +3,13 @@ extends ./includes/top
 append main
     .content
         .login
-            form(role="form", method="post", action="/login")
-                h2 登录
-                input.form-control(type="text", placeholder="用户名", required, autofocus)
-                input.form-control(type="password", placeholder="密码", required)
-                button.btn.btn-lg.btn-primary.btn-block.login_btn(type="reset") 重置
-                button.btn.btn-lg.btn-primary.btn-block.login_btn(type="submit") 登录
+            h2 登录
+            form#do_login(role="form", action="/do_login", method="post")            
+                input.login_nick(type="text", name="nick", placeholder="昵称", maxlength="20", required, autofocus)
+                input.login_pwd(type="password", name="pwd", placeholder="密码",maxlength="12", required)
+                button(type="reset").btn.btn-lg.btn-primary.btn-block 重置
+                button(type="submit").btn.btn-lg.btn-primary.btn-block.login_btn 登录
 //------------------------------------------------------------------------------------------
 append head
     link(rel="stylesheet", href="/stylesheets/login.css",type="text/css")
+    script(type="text/javascript", src="/javascripts/login.js")
