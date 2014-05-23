@@ -13,12 +13,32 @@ a {
     text-align: center;
     outline: none;
     color: #5f9ea0;
+    cursor:pointer;
 }
 a:hover {
     color: #3cb371;
 }
 img{
     border: none;
+}
+.icon_ok {
+    color:green;
+}
+.icon_err {
+    color:red;
+}
+button {
+    background-color: #15B69A;
+    border: 2px #15B69A solid;
+    border-radius: 3px;
+    width:70px;
+    height:26px;
+    margin:10px;
+    cursor:pointer;
+    color:#fff;
+}
+button:hover {
+    background-color: #14c69A;
 }
 /* slightly enhanced, universal clearfix hack */
 .clearfix:after {
@@ -301,7 +321,6 @@ img{
 
 .main{
     width: 1124px;
-    height: 1400px;
     padding-top: 20px;
     margin: auto;
     text-align: left;

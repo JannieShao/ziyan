@@ -12,10 +12,10 @@ CREATE TABLE IF NOT EXISTS users(
     email           varchar(128)    NOT NULL,
     points          int            default '0',
     name            varchar(24),
-    sex             char(2),
+    sex             char(1),
     birthday        varchar(64),
-    address         varchar(128),
     school          varchar(128),
+    tel             varchar(11),
     status          int             default '1',
     primary key (user_id)
 );
@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS needs_msg(
     good_name       varchar(50)     NOT NULL,
     amount          int             NOT NULL,
     introduction    varchar(512),
+    school          varchar(128),
     status          int             default '0',
     primary key (n_id)
 );

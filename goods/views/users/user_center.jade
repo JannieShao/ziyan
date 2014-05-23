@@ -1,1 +1,198 @@
-.user_center user_center
+.user_center_title
+    i.icon_margin.glyph-icon-cogwheel
+    span 账户设置
+.user_center.clearfix
+    - if(user.name)
+        a(href="#")
+            .show_user_msg.user_center_2.change_user_selected.clearfix 
+                i.icon_margin.glyph-icon-vcard
+                span 个人信息
+        a(href="#")
+            .change_user_pwd.user_center_2.change_user_nomal.clearfix
+                i.icon_margin.glyph-icon-keys
+                span 修改密码
+    - else
+        a(href="#")
+            .show_user_msg.user_center_3.change_user_selected.clearfix 
+                i.icon_margin.glyph-icon-vcard
+                span 个人信息
+        a(href="#")
+            .update_user_msg.user_center_3.change_user_nomal.clearfix 
+                i.icon_margin.glyph-icon-edit
+                span 完善个人信息
+        a(href="#")
+            .change_user_pwd.user_center_3.change_user_nomal.clearfix
+                i.icon_margin.glyph-icon-keys
+                span 修改密码
+    .user_center_msg.clearfix
+        .div_change_user_msg
+            .user_center_nick 昵称：#{user.nick}
+            .user_center_email 邮箱：#{user.email}
+            .user_center_point 积分：#{user.points}
+            - if(user.name)
+                form.form_change_user_msg(role="form", action="/change_user_msg", method="post")
+                    table.table_change_user_msg.clearfix
+                        tr 
+                            td 真实姓名：
+                            td.change_msg_content
+                                .user_center_update_name.clearfix
+                                    .user_center_name #{user.name}
+                            td
+                        tr
+                            td 性别：
+                            td
+                                .user_center_update_sex.clearfix
+                                    .user_center_sex
+                                        - if(user.sex == "f")
+                                            i.icon_margin.glyph-icon-male
+                                            span.radio_m 男
+                                            span.change_sex_btn 修改   
+                                        - else
+                                            i.icon_margin.glyph-icon-female
+                                            span 女
+                                            span.change_sex_btn 修改
+                                    .change_user_sex
+                                        input.sex(type="radio",name="sex",value="f",checked="checked",required)
+                                        i.icon_margin.glyph-icon-male
+                                        span.radio_m 男
+                                        input.sex(type="radio",name="sex",value="m",required)
+                                        i.icon_margin.glyph-icon-female
+                                        span 女
+                        tr
+                            td 生日：
+                            td
+                                .user_center_update_birth.clearfix
+                                    .user_center_birth #{user.birthday}
+                                        span.change_birth_btn 修改
+                                    .change_user_birth
+                                        input.birth(type="text",name="birthday",placeholder="#{user.birthday}",value="#{user.birthday}",maxlength="12",required)
+                            td
+                                span.birth_err.icon_err 
+                                    i.icon-remove-sign
+                                span.birth_ok.icon_ok
+                                    i.icon-ok-sign
+                        tr
+                            td 所在学校：
+                            td
+                                .user_center_update_school.clearfix
+                                    .user_center_school #{user.school}                                       
+                            td
+                        tr
+                            td 手机号码：
+                            td
+                                .user_center_update_tel.clearfix
+                                    .user_center_tel #{user.tel}
+                                        span.change_tel_btn 修改
+                                    .change_user_tel
+                                        input.tel(type="text",name="tel",placeholder="#{user.tel}",value="#{user.tel}",maxlength="11",required)
+                                            
+                            td
+                                span.tel_err.icon_err 
+                                    i.icon-remove-sign
+                                span.tel_ok.icon_ok
+                                    i.icon-ok-sign
+                    .change_user_msg_sub_btn
+                        button(type="reset")#change_user_msg_undo.change_user_msg_button 取消
+                        button(type="submit",data-id="#{user.id}")#do_change_user_msg.change_user_msg_button 修改
+            - else
+                .action_update
+                    i.icon-star.icon_margin
+                    span 完善个人信息可获享更多功能。
+                    br
+                    |在这里，你可以寄卖自己的二手物品，可以发布供需消息……
+                    br
+                    |你还在等什么？？？
+    - if(!user.name)
+        .update_user_center_msg.clearfix
+            .div_change_user_msg
+                .user_center_nick 昵称：#{user.nick}
+                form.form_update_user_msg(role="form", action="/update_user_msg", method="post")
+                    table
+                        tr 
+                            td
+                                .user_center_update_name.clearfix
+                                    .change_user_name
+                                        input.name(type="text",name="uname",placeholder="真实姓名",maxlength="5",required)
+                            td
+                                span.name_err.icon_err 
+                                    i.icon-remove-sign
+                                span.name_ok.icon_ok
+                                    i.icon-ok-sign
+                        tr
+                            td
+                                .user_center_update_sex.clearfix
+                                    .change_user_sex
+                                        input.sex(type="radio",name="sex",value="f",checked="checked",required)
+                                        i.icon_margin.glyph-icon-male
+                                        span.radio_m 男
+                                        input.sex(type="radio",name="sex",value="m",required)
+                                        i.icon_margin.glyph-icon-female
+                                        span 女
+                            td
+                        tr
+                            td
+                                .user_center_update_birth.clearfix
+                                    input.birth(type="text",name="birthday",placeholder="生日",maxlength="12",required)
+                            td
+                                span.birth_err.icon_err 
+                                    i.icon-remove-sign
+                                span.birth_ok.icon_ok
+                                    i.icon-ok-sign
+                        tr
+                            td
+                                .user_center_update_school.clearfix
+                                    .change_user_school
+                                        input.school(type="text",name="school",placeholder="所在学校",maxlength="42",required)                                        
+                            td
+                                span.school_err.icon_err 
+                                    i.icon-remove-sign
+                                span.school_ok.icon_ok
+                                    i.icon-ok-sign
+                        tr
+                            td
+                                .user_center_update_tel.clearfix
+                                    input.tel(type="text",name="tel",placeholder="手机号码",maxlength="11",required)
+                                            
+                            td
+                                span.tel_err.icon_err 
+                                    i.icon-remove-sign
+                                span.tel_ok.icon_ok
+                                    i.icon-ok-sign
+                    .user_center_warn.clearfix
+                        i.icon-star.icon_margin
+                        span 注意：以上信息中姓名、学校填写后不能进行更改
+                        br 
+                        |提交前请确认填写准确无误。
+                    .user_center_update_btn
+                        button(type="reset")#update_user_msg_undo.change_user_msg_button 取消
+                        button(type="submit",data-id="#{user.id}")#do_update_user_msg.change_user_msg_button 提交
+                
+    .user_center_pwd.clearfix
+        .div_change_user_pwd
+            form.form_change_user_pwd(role="form", action="/change_user_pwd", method="post")
+                table
+                    tr
+                        td
+                            .user_center_old_pwd
+                                input.old_pwd(type="password",name="old_pwd",placeholder="原密码",maxlength="12",required)
+                        td
+                    tr
+                        td
+                            .user_center_new_pwd
+                                input.new_pwd(type="password",name="new_pwd",placeholder="新密码",maxlength="12",required)
+                        td
+                            span.new_pwd_err.icon_err
+                                i.icon-remove-sign
+                            span.new_pwd_ok.icon_ok
+                                i.icon-ok-sign
+                    tr
+                        td
+                            .user_center_new_repwd
+                                input.new_repwd(type="password",name="new_repwd",placeholder="确认密码",maxlength="12",required)
+                        td
+                            span.new_repwd_err.icon_err
+                                i.icon-remove-sign
+                            span.new_repwd_ok.icon_ok
+                                i.icon-ok-sign
+                button(type="reset")#change_user_pwd_undo.change_user_msg_button 取消
+                button(type="submit",data-id="#{user.id}")#do_change_user_pwd.change_user_msg_button 修改

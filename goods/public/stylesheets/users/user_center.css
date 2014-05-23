@@ -1,0 +1,158 @@
+.user_center {
+    width:100%;
+    margin:auto;
+}
+.user_center_title {
+    padding:20px 35px;
+    color:#3cb371;
+} 
+.show_user_msg,
+.change_user_pwd,
+.update_user_msg {
+    text-align: center;
+    float:left;
+    height:42px;
+    line-height: 42px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.user_center_2{    
+    width:49.5%;
+}
+.user_center_3{
+    width:33%;
+}
+
+.change_user_selected {
+    border: 1px #5f9ea0 solid; 
+    border-bottom:none;
+    background-color:none;
+    color:#3cb371;
+/*    border-radius: 5px;*/
+}
+.change_user_nomal {
+    border-bottom: 1px #5f9ea0 solid;
+    color:#5f9ea0;
+/*    border-radius: 5px;*/
+}
+.change_user_nomal:hover {
+    color:#3cb371;
+/*    border-radius: 5px;*/
+}
+.icon_margin {
+    margin:0px 10px;
+}
+.table_change_user_msg {
+    min-width: 250;
+}
+.table_change_user_msg tr td {
+    min-width:100px;
+}
+.change_msg_content {
+    min-width:140;
+}
+.user_center_msg,
+.update_user_center_msg,
+.user_center_pwd {
+    border: 1px #5f9ea0 solid;
+    border-top:none;
+    float:left;
+    width:99%;
+    padding-top:20px;
+    margin-bottom: 5px;
+    height:400px;
+}
+.user_center_msg {
+    height:450px;
+}
+.update_user_center_msg {
+    height:420px;
+}
+.user_center_pwd {
+    height:350px;
+}
+
+.user_center_school input,
+.user_center_name input,
+.name_ok,
+.name_err,
+.birth_ok,
+.birth_err,
+.school_ok,
+.school_err,
+.tel_ok,
+.tel_err,
+.new_pwd_ok,
+.new_pwd_err,
+.new_repwd_ok,
+.new_repwd_err,
+.user_center_pwd,
+.change_user_birth,
+.change_user_tel,
+.update_user_center_msg,
+.change_user_sex {
+    display: none
+}
+.div_change_user_msg {
+    width:400px;
+    margin:auto;
+    padding-top: 10px;
+}
+.div_change_user_pwd {
+    width:300px;
+    margin:auto;
+    padding-top: 40px;
+}
+.div_change_user_msg div {
+    width:100%;
+    height:42px;
+    line-height: 42px;
+    float:none;
+    margin:auto;
+}
+.radio_m{
+    margin-right:48px;
+}
+.user_center_warn,
+.action_update {
+    color:red;
+}
+
+.name,
+.birth,
+.school,
+.tel,
+.old_pwd,
+.new_pwd,
+.new_repwd {
+    width:200px;
+    height:24px;
+    border-radius: 3px;
+}
+
+.glyph-icon-male,
+.glyph-icon-female {
+    color:#3cb371;
+}
+
+.change_birth_btn,
+.change_tel_btn,
+.change_sex_btn {
+    color:#5f9ea0;
+    cursor: pointer;
+    margin-left:20px;
+}
+
+.change_user_msg_sub_btn {
+    display: none;
+}
+.user_center_update_btn {
+    padding-top:10px;
+}
+
+.user_center_old_pwd,
+.user_center_new_pwd,
+.user_center_new_repwd {
+    height:42px;
+    line-height: 42px;
+}

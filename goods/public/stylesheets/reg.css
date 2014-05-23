@@ -18,24 +18,24 @@ table tr td {
     vertical-align: middle;
 }
 .reg_form input {
-    width:164px;
+    width:200px;
     height:24px;
     border-radius: 3px;
 }
-.nick_err,.nick_ok,.pwd_err,.pwd_ok,.repwd_err,.repwd_ok,.email_err,.email_ok {
+.nick_err,
+.nick_ok,
+.pwd_err,
+.pwd_ok,
+.repwd_err,
+.repwd_ok,
+.email_err,
+.email_ok {
     display: none;
 }
+
 .prompt {
     width:100px;
 }
 .btn_div {
     margin-left:70px;
-}
-.reg_button {
-    background-color: #15B69A;
-    border-color:#15B69A;
-    border-radius: 5px;
-    width:65px;
-    margin:5px;
-    cursor:pointer;
 }

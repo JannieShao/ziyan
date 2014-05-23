@@ -73,5 +73,21 @@ exports.reg = function(req, res, cb){
             do_cookies.set_cookie_users_nick(nick, res)            
         }
     })
+}
 
+exports.check_tel = function(req, res) {
+    var tel = req.params.tel
+    model_users.user_select_by_tel(tel, function(err, rows){
+        if(err) {
+            console.log(">>>>select fail")
+            return
+        } else {
+            if(rows.length !== 0) {
+                res.send({tel_ok: 0})
+            } else {
+                res.send({tel_ok: 1})
+            }
+        }
+        
+    })
 }

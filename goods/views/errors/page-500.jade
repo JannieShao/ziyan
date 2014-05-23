@@ -1,0 +1,25 @@
+doctype html
+html(lang="zh-cn")
+    head
+        meta(charset="utf-8")
+        meta(name="description", content="500错误")
+        meta(name="author", content="ziyan")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="robots", content="noindex, nofollow")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title 500错误
+
+        link(rel="stylesheet", href="/stylesheets/errors/errors.css", type="text/css")
+
+    body
+        .content
+            .main_500
+                .http_error Sorry!
+                .show 
+                    span.error HTTP 错误 500
+                    br
+                    span 访问过程中出现异常错误.
+                    br
+                    span 请稍后再试
+                .home
+                    a(href="/index") 返回首页

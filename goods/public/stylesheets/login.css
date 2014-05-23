@@ -1,0 +1,15 @@
+.login {
+    width:300px;
+    margin:auto;
+}
+.user_login_nick,
+.uer_login_pwd {
+    
+}
+
+.login_nick,
+.login_pwd {
+    width:200px;
+    height:26px;
+    border-radius: 3px;
+}

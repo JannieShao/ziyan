@@ -13,15 +13,15 @@ append main
                             span.selected 账户设置
                     li
                         a.but_user_car(href="#user_car")
-                            i.user_car_icon.glyphicon.icon-group
+                            i.user_car_icon.glyphicon.icon-shopping-cart
                             span 我的购物车
                     li
                         a.but_user_order(href="#user_order")
-                            i.user_order_icon.glyphicon.glyphicon-gift
+                            i.user_order_icon.glyphicon.glyph-icon-gift
                             span 已买到的宝贝
                     li
                         a.but_user_addr(href="#user_addr")
-                            i.user_addr_icon.glyphicon.glyphicon-envelope
+                            i.user_addr_icon.glyphicon.glyph-icon-list 
                             span 收货地址
                     - if (user.school)
                         li
@@ -34,7 +34,10 @@ append main
                                 span 供需消息管理
                     li
                         a.but_user_msg(href="#user_msg")
-                            i.user_msg_icon.glyphicon.glyphicon-envelope
+                            - if(user.new_msg_total)
+                                i.user_msg_icon.glyphicon.glyph-icon-message-plus
+                            - else
+                                i.user_msg_icon.glyphicon.icon-envelope
                             span 站内信
                     
 
@@ -70,4 +73,6 @@ append main
 //-------------------------------------------------------------------------------------
 append head
     link(rel="stylesheet", href="/stylesheets/users/main.css",type="text/css")
+    link(rel="stylesheet", href="/stylesheets/users/user_center.css",type="text/css")
     script(type="text/javascript", src="/javascripts/users/main.js")
+    script(type="text/javascript", src="/javascripts/users/user_center.js")

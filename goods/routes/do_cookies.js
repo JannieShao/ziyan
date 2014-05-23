@@ -24,6 +24,7 @@ exports.set_cookie_users_n_p = function(args, res) {
     model_users.user_select_by_n_p(args, function(err, rows) {
         if(err) {
             console.log("login fail")
+            res.render('errors/page-500')
         } else {
             if(rows.length === 0) {
                 res.send({login_ok: 0})
@@ -42,9 +43,13 @@ exports.set_cookie_users_id = function(id, cb) {
     model_users.user_select_by_id(id, function(err, rows) {
         if(err) {
             console.log("get user fail")
+            var cookies = null
+            cb(cookies)
         } else {
             if(rows.length === 0) {
-                result.tag = 0
+                console.log("none user")
+                var cookies = null
+                cb(cookies)
             } else {
                 get_users(rows, cb)
             }
@@ -56,23 +61,28 @@ function get_users(output, cb){
     var cookies = {}
     cookies.id = output[0].user_id
     cookies.nick = output[0].nick_name
-    cookies.email = output[0].email
+    var email = output[0].email
+    emails = email.split("@")
+    email = emails[0].substring(0,1)+"***"+"@"+emails[1]
+    cookies.email = email
     cookies.points = output[0].points
     cookies.name = output[0].name
     cookies.sex = output[0].sex
     cookies.birthday = output[0].birthday
-    cookies.address = output[0].address
+    cookies.tel = output[0].tel
     cookies.school = output[0].school
 
     model_msg.msg_total_by_to(cookies.id, function(err, out){
         if(err) {
             console.log("\nget msg fail\n")
+            cookies = null
         } else {
             cookies.new_msg_total= out[0].total            
         }
         model_car.car_select_total_by_user(cookies.id, function(err, out){
             if(err) {
                 console.log("\nget car fail\n")
+                cookies = null
             } else {
                 cookies.car_total= out[0].total           
             }
@@ -91,7 +101,7 @@ function set_cookie_users(output, res, cb) {
     cookies.name = output[0].name
     cookies.sex = output[0].sex
     cookies.birthday = output[0].birthday
-    cookies.address = output[0].address
+    cookies.tel = output[0].tel
     cookies.school = output[0].school
 
     model_msg.msg_total_by_to(cookies.id, function(err, out){

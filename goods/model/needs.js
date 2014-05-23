@@ -2,8 +2,8 @@ var conn = require("./conn/connection")
 
 //add
 exports.need_add = function(args, cb) {
-    var sql = "insert into needs_msg(user_id,add_time,good_name,amount,introduction) values("
-        sql += args.user_id+",'"+args.add_time+"','"+args.good_name+"',"+args.amount+",'"+args.introduction+"');"
+    var sql = "insert into needs_msg(user_id,add_time,good_name,amount,introduction,school) values("
+        sql += args.user_id+",'"+args.add_time+"','"+args.good_name+"',"+args.amount+",'"+args.introduction+"','"+args.school"');"
     conn.exec_sql(sql, cb)
 }
 
@@ -26,6 +26,11 @@ exports.need_select_by_time = function(times, cb) {
 //---------查询今天添加的供需记录
 exports.need_select_today = function(cb) {
     var sql = "select * from needs where TO_DAYS(add_time) = TO_DAYS(curdate());"
+    conn.exec_sql(sql, cb)
+}
+
+exports.needs_select_by_school = function(school, cb) {
+    var sql = "select * from needs where school = '"+school+"';"
     conn.exec_sql(sql, cb)
 }
 

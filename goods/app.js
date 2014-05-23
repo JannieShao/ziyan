@@ -7,6 +7,7 @@ var routes = require('./routes/main');
 var tools = require('./routes/tools');
 var do_reg = require('./routes/reg');
 var do_login = require('./routes/login');
+var user = require('./routes/user');
 
 // var set_cookies = require('./routes/do_cookies')
 
@@ -59,11 +60,16 @@ app.get('/register', routes.reg);
 app.post('/reg', do_reg.reg);
 app.post('/do_check_nick/:nick', do_reg.check_nick);
 app.post('/do_check_email/:email', do_reg.check_email);
-
+app.post('/do_check_tel/:tel', do_reg.check_tel);
+//user_center
+app.post('/update_user_msg/:id', user.update_user_msg);
+app.post('/change_user_msg/:id', user.change_user_msg);
+app.post('/change_user_pwd/:id', user.change_user_pwd);
 
 //手动添加分类信息
 app.post('/add_sort', tools.add_sorts);
-app.get('/tools/addsort', routes.tools_add_sorts)
+app.get('/tools/addsort', routes.tools_add_sorts);
+app.get('/icons', routes.icon);
 
 
 http.createServer(app).listen(app.get('port'), function(){

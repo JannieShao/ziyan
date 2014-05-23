@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    $('.search_text').focus()
+
     $(".top_all_softs").hover(function(){
         // $(".top_soft_show_all").css("display", "block");
         // $(".top_soft_show_all").slideDown()

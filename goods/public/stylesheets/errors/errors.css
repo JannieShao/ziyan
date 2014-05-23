@@ -1,0 +1,64 @@
+body{
+    background-color:#eee; 
+    width:100%;
+    height:100%;
+}
+html{
+    height:100%;
+}
+    
+.content{
+    top: 150px;
+    width: 500px;
+    height:260px;
+    margin: auto;
+    position: relative;
+    border:3px groove #AEADB2;
+    border-radius:15px;
+}    
+.main_403{
+    background:url("/imgages/no_permission.jpg") no-repeat;
+}
+.main_500{
+    background:url("/imgages/http_error_500.jpg") no-repeat;
+}
+.main_403,.main_500{
+
+    width:200px;
+    height:160px;
+    margin:auto;
+    padding-left: 80px;
+    margin-top: 50px;
+}
+.no_permission,.http_error{
+    color: #B5764B;
+    font-size:16px;
+    font-weight: bold;
+}
+.show{
+    font-size:14px;
+}
+    
+.error{
+    color:#AEADB2;
+}
+.home{
+    width: 80px;
+    height: 30px;
+    margin: 10px;
+    border:1px solid #4b4d4e;
+    border-radius:5px;
+    text-align: center;
+}
+.home a{   
+    padding:5px;
+    text-decoration: none;
+    color:#2F2E30;
+    font-size: 14px;
+}
+.home a:hover{
+    color:#B5764B;
+}
+.no_permission,span,.home a{
+    line-height: 30px;
+}   

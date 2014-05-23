@@ -2,13 +2,16 @@ extends ./includes/top
 
 append main
     .content
-        .login
-            h2 登录
-            form#do_login(role="form", action="/do_login", method="post")            
-                input.login_nick(type="text", name="nick", placeholder="昵称", maxlength="20", required, autofocus)
-                input.login_pwd(type="password", name="pwd", placeholder="密码",maxlength="12", required)
-                button(type="reset").btn.btn-lg.btn-primary.btn-block 重置
-                button(type="submit").btn.btn-lg.btn-primary.btn-block.login_btn 登录
+        .main
+            .login
+                h2 登录
+                form#do_login(role="form", action="/do_login", method="post")
+                    .user_login_nick            
+                        input.login_nick(type="text", name="nick", placeholder="昵称", maxlength="20", required, autofocus)
+                    .uer_login_pwd
+                        input.login_pwd(type="password", name="pwd", placeholder="密码",maxlength="12", required)
+                    button(type="reset").btn.btn-lg.btn-primary.btn-block 重置
+                    button(type="submit").btn.btn-lg.btn-primary.btn-block.login_btn 登录
 //------------------------------------------------------------------------------------------
 append head
     link(rel="stylesheet", href="/stylesheets/login.css",type="text/css")

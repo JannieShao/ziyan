@@ -1,48 +1,19 @@
 var crypto = require('crypto')
 
-//--------------------------------------------------------------------------------------------------------
-exports.check_name = function(name) {
-    var re = /^[\u4e00-\u9fa5]{2,4}$/
-    return re.test(name)
-}
-//---------------------------------------------------------------------------------------------------------
-exports.check_email = function(email) {
-    var re = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/
-    return re.test(email)
-}
-//---------------------------------------------------------------------------------------------------------
-exports.check_cardid = function(cardid) {
-    var re = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/
-    return re.test(cardid)
-}
-//---------------------------------------------------------------------------------------------------------
-exports.yesteday = function() {
-    return exports.prev_day(1)
-}
-//---------------------------------------------------------------------------------------------------------
-exports.today = function() {
-    return exports.prev_day(0)
-}
-//---------------------------------------------------------------------------------------------------------
-exports.day_begin = function(day) {
-    if (day === 'yesterday') {
-        day = exports.yesteday()
+var is_leap_year = exports.is_leap_year = function(year) {  //判断闰年
+    if (year % 4 == 0 && year % 100 != 0) {
+        return true
     }
 
-    return Math.floor((new Date(day)).valueOf() / 1000)
+    if(year % 400 == 0) {
+        return true
+    }
+
+    return false
 }
 //---------------------------------------------------------------------------------------------------------
-exports.prev_day = function(num) {
-    var time_len = 24 * 60 * 60 * 1000 * num
-    var yday     = Date.now() - time_len
-    var d_yday   = new Date(yday)
-
-    var year  = '' + d_yday.getFullYear()
-    var month = (d_yday.getMonth() > 8) ? ('' + (d_yday.getMonth() + 1)) : ('0' + (d_yday.getMonth() + 1))
-    var day   = (d_yday.getDate() > 9)  ? ('' + d_yday.getDate()) : ('0' + d_yday.getDate())
-    var date  = year + '-' + month + '-' + day
-
-    return date
+var is_greater_month = exports.is_greater_month = function(month) {  //判断大月
+    return (month-1)%7%2 == 0
 }
 //----------------------------------------
 //判断日期格式是否正确    返回值是错误信息, 无错误信息即表示合法日期字符串

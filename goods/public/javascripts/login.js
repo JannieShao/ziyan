@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    
     $("#do_login").submit(function(event) {
         $self = $(this);
         $.ajax({
