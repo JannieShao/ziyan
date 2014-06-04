@@ -1,8 +1,10 @@
 var conn = require("./conn/connection")
+var u2 = require("../routes/util2")
 
 //add
 exports.order_add = function(args, cb) {
-    var sql = "insert into orders(user_id,addr_id) values("+args.order.user_id+","+args.order.add_id+");"
+    var now_date = u2.date_format(new Date())
+    var sql = "insert into orders(user_id,addr_id,add_time) values("+args.order.user_id+","+args.order.add_id+",'"+now_date+"');"
     sql += "insert into orders_msg(order_id,good_id,sum,price) values"
     for(var item in args.msg) {
         sql += "(LAST_INSERT_ID(),"+args.msg[item].good_id+","+args.msg[item].sum+",'"+args.msg[item].price+"'),"

@@ -1,0 +1,88 @@
+.needs_msg
+    .needs_msg_select_div
+        span 状态：
+        select
+            option 请选择
+            option 新提交订单
+            option 供应方已确认
+            option 已发货
+            option 待评价
+            option 交易成功
+            option 交易关闭
+        span 时间：
+        input.Wdate.date-input(name="date_selected", type="text",value="", onclick="WdatePicker()")
+        button 查询
+
+    table
+        tr.table_titles
+            td.needs_msg_no 编号
+            td.order_msg_user 用户
+            td.needs_msg_title 物流
+            td.needs_msg_sum 交易总额
+            td.needs_msg_time 生成时间
+            td.needs_msg_status 状态
+            td.needs_msg_action 操作
+        tr
+            td 1
+            td ziyan
+            td 圆通速运
+            td ￥ 1190.00
+            td 2014-5-27 19:20:13
+            td 交易成功
+            td 
+                button 删除
+        tr
+            td 2
+            td qq
+            td 
+            td ￥ 0.00
+            td 2014-5-28 9:20:13
+            td 交易关闭
+            td 
+                button 删除
+        tr
+            td 3
+            td aaa
+            td 中通
+            td ￥ 50.00
+            td 2014-5-28 11:20:13
+            td 待评价
+            td 
+                button.undo 删除
+        tr
+            td 4
+            td bbb
+            td 顺风
+            td ￥ 2190.00
+            td 2014-5-28 13:53:56
+            td 已发货
+            td 
+                button.undo 删除
+        tr
+            td 5
+            td ccc
+            td 
+            td ￥ 1190.00
+            td 2014-5-28 16:45:32
+            td 供应方已确认
+            td 
+                button.undo 删除
+        tr
+            td 6
+            td eee
+            td 
+            td ￥ 1190.00
+            td 2014-5-28 19:20:34
+            td 新提交
+            td 
+                button.undo 删除
+        tr
+            td 7
+            td lynn
+            td 
+            td ￥ 1190.00
+            td 2014-5-28 19:45:19
+            td 新提交
+            td 
+                button.undo 删除
+

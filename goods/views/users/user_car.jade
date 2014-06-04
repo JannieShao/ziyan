@@ -1,1 +1,33 @@
-.usercar 我的购物车
+
+.user_car_title
+    i.icon_margin.icon-shopping-cart
+    span 我的购物车
+    .user_car_action
+        button.undo_car_select 取消
+        button.do_buy_now 立即购买
+.user_car.clearfix
+    table#table_car
+        tr.table_titles
+            td 选择
+            td 物品编号
+            td 缩略图
+            td 名称
+            td 单价
+            td 几成新
+            td 数量
+            td 操作
+        - each car in cars
+            tr
+                td
+                    input.checkbox_select(type="checkbox", name="do_select", value="#{car.car_id}")
+                td #{car.good_id}
+                td 
+                    img(src="#{img_path}/goods/#{car.good_img_0}")
+                td 
+                    a(href="/show/#{car.car_id}") #{car.good_name}
+                td ￥#{car.good_price}
+                td #{car.level}
+                td #{car.sum}
+                td
+                    button.remove_car(data-id="#{car.car_id}") 移除
+    

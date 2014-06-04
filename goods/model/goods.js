@@ -1,8 +1,10 @@
 var conn = require("./conn/connection")
+var u2 = require("../routes/util2")
 //add
 exports.good_add = function(args, cb) {
-    var sql = "insert into goods(good_name,user_id,good_price,sort_id,level,sum,introduction,img_path)"
-    sql += "values('"+args.good_name+"',"+args.user_id+",'"+args.good_price+"',"+args.sort_id+","
+    var now_date = u2.date_format(new Date())
+    var sql = "insert into goods(good_name,user_id,add_time,good_price,sort_id,level,sum,introduction,img_path)"
+    sql += "values('"+args.good_name+"',"+args.user_id+",'"+now_date+"','"+args.good_price+"',"+args.sort_id+","
     sql += args.level+","+args.sum+",'"+args.introduction+"','"+args.img_path+"');"
     conn.exec_sql(sql, cb)
 }
@@ -26,7 +28,10 @@ exports.good_select_by_user = function(id, cb) {
     var sql = "select * from goods where user_id = "+id+";"
     conn.exec_sql(sql, cb)
 }
-
+exports.good_select_by_add_time = function(date, cb) {
+    var sql = "select * from goods where TO_DAYS(add_time) = TO_DAYS('"+date+"');"
+    conn.exec_sql(sql, cb)
+}
 exports.good_select_by_status = function(status, cb) {
     var sql = "select * from goods where good_status = "+status+";"
     conn.exec_sql(sql, cb)

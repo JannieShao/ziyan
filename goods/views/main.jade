@@ -90,12 +90,15 @@ append  main
                 .main_middle_top
                     img(src="#{img_path}/1111.jpg")
                 .main_middle_center
+                    .main_middle_center_title
+                        .new_sale_title
+                            span 最新上架物品
                     .main_middle_center_ul
                         ul.clearfix
                             -for(var i=0;i<6;i++)
                                 li
                                     a(href="#")
-                                        img(src="#{img_path}/001.jpg")
+                                        img(src="#{img_path}/goods/#{goods_img[i]}")
                                     br
                                     .goods_name
                                         a(href="#") 99朵粉玫瑰长沙鲜花速递重庆南京鲜花南昌合肥鲜花店宁波大连送花
@@ -106,9 +109,31 @@ append  main
                                     .goods_ower
                                         span.span4 最近17人成交
                                         span.span5 湖南 长沙
+
             .main_right
+                .main_right_sell
+                    .msg_title 需求消息
+                    ul
+                        li
+                            i.icon-comments
+                            span 求台式电脑一台
+                        li
+                            i.icon-comments-alt
+                            span 急需mp3一枚
+                        li
+                            i.icon-comments
+                            span 求高数课本一套
+                        li
+                            i.icon-comments-alt
+                            span 急！急！急！工图工具一份
+                        li
+                            i.icon-comments
+                            span 求购小米3手机壳一枚
+                        li
+                            i.icon-comments-alt
+                            span 急需笔记本散热架
                 .main_right_dyn 
-                    .dyn_title 动态
+                    .dyn_title 小贴士
                     ul
                         -for(var i=0;i<4;i++)
                             li
@@ -117,17 +142,7 @@ append  main
                                 -else
                                     i.icon-comments-alt
                                 span 低碳生活从买卖二手物品开始
-                .main_right_sell
-                    .msg_title 供需消息
-                    ul
-                        -for(var i=0;i<6;i++)
-                            li
-                                -if(i % 2 == 0) 
-                                    i.icon-comments
-                                    span 求电脑一台
-                                -else
-                                    i.icon-comments-alt
-                                    span 出售mp3一枚
+                
 //-------------------------------------------------------------------------------------
 append head
     link(rel="stylesheet", href="/stylesheets/index_container.css",type="text/css")

@@ -1,0 +1,46 @@
+.goods_control
+    .goods_control_select_div
+        span 物品编号：
+        input.select_goods_no(type="text")
+        span 状态：
+        select
+            option 请选择
+            option 在架
+            option 已下架
+            option 已售
+        span 上架时间：
+        input.Wdate.date-input(name="date_selected", type="text",value="", onclick="WdatePicker()")
+        button 查询
+
+    table
+        tr.table_titles
+            td.goods_no 物品编号
+            td.goods_img 缩略图
+            td.goods_name 名称
+            td.goods_price 价格
+            td.goods_xinjiu 几成新
+            td.goods_sum 数量
+            td.goods_time 上架时间
+            td.goods_owner 供应者
+            td.goods_status 状态
+            td.goods_action 操作
+        - var v = ["name","price","user","school"]
+        - var goods_msg = {0:{"name":"大学化学实验","price":"5.00","user":"aaa","school":"陕西科技大学"},1:{"name":"加工工艺基础","price":"8.00","user":"bbb","school":"陕西科技大学"},2:{"name":"管理学-原理与方法","price":"6.00","user":"ccc","school":"陕西科技大学"},3:{"name":"数字图像处理","price":"5.00","user":"ziyan","school":"陕西科技大学"}}
+        - for(var x = 4;x<18;x++)goods_msg[x]= {"name":"数字图像处理","price":"5.00","user":"qqt","school":"陕西科技大学"}
+        - for(var i=0;i<18;i++)
+            tr
+                td #{i+3}
+                td
+                    a(href="#")
+                        img(src="#{img_path}/goods/#{i+2}.jpg")
+                td
+                    a(href="#") #{goods_msg[i].name}
+                td ￥ #{goods_msg[i].price}
+                td 8成新
+                td 1
+                td 2014-5-27 18:#{i*2+15}:#{i*2+4}
+                td #{goods_msg[i].user}
+                td 在架 
+                td 
+                    button 强制下架
+        

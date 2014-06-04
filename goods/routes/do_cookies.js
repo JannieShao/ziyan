@@ -27,11 +27,17 @@ exports.set_cookie_users_n_p = function(args, res) {
             res.render('errors/page-500')
         } else {
             if(rows.length === 0) {
+                console.log("login fail 0")
                 res.send({login_ok: 0})
             } else {
-                set_cookie_users(rows, res, function(){
-                    res.send({login_ok: 1})
-                })
+                if(rows[0].status === 0) {
+                    console.log("login fail 2")
+                    res.send({login_ok: 2})
+                } else {
+                    set_cookie_users(rows, res, function(){
+                        res.send({login_ok: 1})
+                    })    
+                }                
             }
         }
     })    
@@ -96,7 +102,10 @@ function set_cookie_users(output, res, cb) {
     var cookies = {}
     cookies.id = output[0].user_id
     cookies.nick = output[0].nick_name
-    cookies.email = output[0].email
+    var email = output[0].email
+    emails = email.split("@")
+    email = emails[0].substring(0,1)+"***"+"@"+emails[1]
+    cookies.email = email
     cookies.points = output[0].points
     cookies.name = output[0].name
     cookies.sex = output[0].sex

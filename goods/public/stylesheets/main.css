@@ -40,6 +40,18 @@ button {
 button:hover {
     background-color: #14c69A;
 }
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px gray solid;
+}
+table th,
+table td {
+    border:1px gray dotted;
+}
+.table_titles {
+    height:32px;
+}
 /* slightly enhanced, universal clearfix hack */
 .clearfix:after {
     visibility: hidden;
@@ -294,7 +306,18 @@ button:hover {
     float:right;
     padding:8px 20px 8px 8px;
 }
-.book_all {
+.book_all,
+.shuma_all,
+.computer_all,
+.cards_all,
+.plays_all,
+.decoration_all,
+.shoes_all,
+.clothes_all,
+.sports_all,
+.girls_all,
+.boys_all
+ {
     border-color: #15B69A;
     border-style: solid;
     border-width: 1px;
@@ -302,7 +325,8 @@ button:hover {
     display: none;
     position: absolute;
     background-color:#e5e5e5;
-    width:200px;
+    width:500px;
+    min-width:200px;
     margin-top:-26px;
     margin-left:105%;
     padding:0px;
@@ -310,10 +334,42 @@ button:hover {
     cursor: auto;
     font-weight: normal; 
 }
-.book_all span {
-    border-bottom: #e5e6e6 1px solid;
+.sorts_b {
+    float:left;
+    width:auto;
+    min-width: 250px;
 }
-
+.sorts_b_title {
+    text-align: left;
+    font-weight: bold;
+    padding-left:15px;
+    border: gray 1px dotted;
+    
+}
+.sorts_c {
+    width:249px;
+    float:left;
+    border-top: gray 1px dotted;
+    border-right:gray 1px dotted;   
+}
+.sorts_c_title {
+    text-align: left;
+    padding-left:30px;
+    border-bottom: gray 1px dotted;
+}
+.sorts_d_title{
+    margin:0px 5px;
+    height:24px;
+    line-height: 24px;
+    float:left;
+    width: auto;
+}
+.draw_line {
+    background: url("../images/line.png") repeat;
+    width:1px;
+    height:100px;
+    float:left;
+}
 .content {   
     min-width: 980px;
     text-align: center;

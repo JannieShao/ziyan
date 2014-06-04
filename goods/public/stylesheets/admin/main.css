@@ -1,5 +1,6 @@
 html {
-    height:100%
+    height:100%;
+    overflow-y: hidden;
 }
 body {
     margin:0;
@@ -7,10 +8,45 @@ body {
     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size:14px;
     height:100%;
-    background-color:#eee
+    background-color:#eee;
+}
+button {
+    background-color: #15B69A;
+    border: 2px #15B69A solid;
+    border-radius: 3px;
+    width:80px;
+    height:26px;
+    margin:10px;
+    cursor:pointer;
+    color:#fff;
+}
+.button_err {
+    background-color: #aa584d;
+    border-color: #aa584d;
+}
+.undo {
+    background-color: gray;
+    border-color: gray;
+}
+button:hover {
+    background-color: #14c69A;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px gray solid;
+}
+table th,
+table td {
+    border:1px gray dotted;
+    word-break:break-all;
+}
+.table_titles {
+    height:32px;
 }
 .top_nav {
     background:url("/images/top_bg.jpg") repeat;
+/*    background-color: #15B69A;*/
     height:45px;
     width:100%;
     position:fixed;
@@ -22,18 +58,18 @@ body {
 }
 .top_nav p {
     padding-top:9px;
-    padding-left:10px
+    padding-left:20px
 }
 .admin_container {
     width:100%;
     padding-top:45px;
-    border-style:solid;
-    border-width:0;border-color:
-    #357ebd;min-width:600px;
-    height:100%
+    min-width:600px;
+    height:100%;
+    background-color: #eee;
 }
 .left {
     background:url("/images/left_bg.jpg") repeat;
+    /*background-color: #15B69A;*/
     height:100%;
     width:175px;
     float:left;
@@ -59,7 +95,7 @@ body {
 .selected,.admin_icon {
     color:#fff
 }
-.user_icon,.goods_icon,.orders_icon,.gx_msg_icon,.user_msg_icon {
+.user_icon,.goods_icon,.orders_icon,.needs_msg_icon,.user_msg_icon {
     color:#808080
 }
 #admin_right {
@@ -67,9 +103,9 @@ body {
     width:auto;
     height:100%;
     margin-left:175px;
-    overflow-y:scroll
+    overflow-y:scroll;
 }
-#admin_center,#user_control,#goods_control,#orders_control,#gx_msg,#user_msg {
+#admin_center,#user_control,#goods_control,#orders_control,#needs_msg,#user_msg {
     display:none;
     width:100%;
     height:100%;
@@ -79,7 +115,6 @@ body {
     width:100%;
     height:100%;
     background-color:#eee;
-    border-radius:15px
 }
 .admin_right_to_center {
     min-width:900px;

@@ -12,7 +12,11 @@ $(document).ready(function() {
                     location.href = "/index"
                 }, 500)                
             } else {
-                alert('用户名或密码错误')                
+                if(data.login_ok === 2) {
+                    alert('该账户已被禁用，请联系管理员')
+                } else {
+                    alert('用户名或密码错误') 
+                }                              
             }
         })
         event.preventDefault()

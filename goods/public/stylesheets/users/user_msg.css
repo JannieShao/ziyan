@@ -1,0 +1,80 @@
+.user_msg {
+    width:100%;
+    margin:auto;
+}
+.user_msg_title {
+    padding:20px 35px;
+    color:#3cb371;
+}
+.user_msg img {
+    width:26px;
+    height:26px;
+}
+.user_msg_show table {
+    max-width:980px;
+    width:900px;
+    min-width:500px;
+    text-align: center;
+    margin:auto;
+    padding: 20px 0px;
+}
+.user_msg table tr td {
+    min-width:50px;
+    max-width: 150px;
+}
+.user_msg_show {
+    float:left;
+    width:99%;
+    padding-top:20px;
+    margin-bottom: 5px;    
+    height:400px;
+}
+.user_msg_show button {
+    width:100px;
+}
+.user_msg_show_title{
+    text-align: center;
+    float:left;
+    height:42px;
+    line-height: 42px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.user_msg_add {
+    display: none;
+    position: fixed;
+    left: 400px;
+    top:300px;
+    background-color: #e5e5e5;
+    border: 1px #5f9ea0 dotted;
+    width:500px;
+}
+.add_msg_title {
+    color:#5f9ea0;
+    margin:5px 0px 5px 10px;
+}
+.user_msg_add table {
+    padding-top: 20px ;
+    margin:auto;
+    border:none;
+}
+.user_msg_add table tr td{
+    min-width:50px;
+    max-width:400px;
+    border:none;
+}
+.user_msg_add table tr td select {
+    width:80px;
+    margin:0px 5px;
+}
+.user_msg_add_btn {
+    width:200px;
+    margin:auto;
+}
+
+.have_read {
+    color:#5f9ea0;
+}
+.no_read {
+    color:green;
+}

@@ -12,6 +12,42 @@ $(document).ready(function(){
         $(".top_soft_show_all").fadeOut()
     })
 
+    var tag = ["#top_books",
+            "#top_shuma",
+            "#top_computer",
+            "#top_cards",
+            "#top_plays",
+            "#top_decoration",
+            "#top_shoes",
+            "#top_clothes",
+            "#top_sports",
+            "#top_girls",
+            "#top_boys",
+            "#top_boys"]
+    var tag2 = [".book_all",
+            ".shuma_all",
+            ".computer_all",
+            ".cards_all",
+            ".plays_all",
+            ".decoration_all",
+            ".shoes_all",
+            ".clothes_all",
+            ".sports_all",
+            ".girls_all",
+            ".boys_all",
+            ".boys_all"]
+
+    for(var i = 0;i<tag.length;i++) {
+        var hovers = function(i){
+            $(tag[i]).hover(function(){
+                $(tag2[i]).css("display", "block");
+            },function(){
+                $(tag2[i]).css("display", "none");
+            })
+        }(i) 
+        hovers       
+    }
+
     $("#top_books").hover(function(){
         $(".book_all").css("display", "block");
     },function(){

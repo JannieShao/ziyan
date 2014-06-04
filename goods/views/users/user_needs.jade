@@ -1,1 +1,56 @@
-.user_needs 供需消息管理
+.user_needs_title
+    i.icon_margin.icon-comments
+    span 需求消息管理
+.user_needs.clearfix   
+    button.add_needs 发布需求消息
+    .user_needs_show
+        table
+            tr.table_titles
+                td 需求主题
+                td 数量
+                td 简介
+                td 状态
+                td 操作
+            tr
+                td 求台式电脑一台
+                td 1
+                td 台式机，鼠标键盘齐全
+                td 审核中
+                td
+                    button 删除
+                    button 修改
+            tr
+                td 求高数课本一套
+                td 1
+                td 高数上、下两册
+                td 发布中
+                td
+                    button 删除
+                    button 交易成功
+            tr
+                td 求高数课本一套
+                td 1
+                td 高数上、下两册
+                td 交易成功
+                td
+                    button 删除
+                    button.addr_moren 交易成功
+
+//.user_needs_add
+    .add_needs_title 
+        i.icon_margin.glyph-icon-message-empty
+        span 站内信
+    table
+        tr
+            td 来自：
+            td 张三
+        tr
+            td 时间：
+            td 2014-5-27 16:11:34
+        tr
+            td 内容：
+            td
+                textarea(cols="40", rows="7", maxlength="150", name="cg_intro", value="", readonly) 测试
+    .user_needs_add_btn
+        button 返回
+        button 回复

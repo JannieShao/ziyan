@@ -1,1 +1,116 @@
-.user_goods 我的二手物品
+.user_goods_title
+    i.icon_margin.glyph-icon-heart
+    span 我的二手物品
+.user_goods.clearfix
+    a(href="#")
+        .user_goods_show_title.user_center_2.change_user_selected.clearfix 
+            i.icon_margin.icon-tags
+            span 寄卖物品
+    a(href="#")
+        .user_goods_order_title.user_center_2.change_user_nomal.clearfix
+            i.icon_margin.icon-list-ul
+            span 相关订单
+    .user_goods_show
+        button.add_goods 添加寄卖物品
+        table
+            tr.table_titles
+                td 物品编号
+                td 缩略图
+                td 名称
+                td 单价
+                td 几成新
+                td 数量
+                td 状态
+            - if(user_goods)
+                - each goods in user_goods
+                    tr
+                        td #{goods.no}
+                        td 
+                            img(src="#{img_path}/goods/#{goods.img[0]}")
+                        td 
+                            a(href="#") #{goods.name}
+                        td ￥ #{goods.price}
+                        td #{goods.level}
+                        td #{goods.sum}
+                        td 
+                            - if(goods.status === 0) 
+                                |在架
+                            - if(goods.status === 1)
+                                |已下架
+                            - if(goods.status === 2)
+                                |已售
+            - else
+                table
+                    tr.table_titles
+                        td 
+                            span 亲，你没有在此寄卖物品，快快拿出你的物品分享给大家吧。
+        .user_goods_order
+            table
+                tr.table_titles
+                    td 
+                    td 名称
+                    td 单价
+                    td 几成新
+                    td 数量
+                    td 总价
+                    td.order_status 状态
+                    td.order_caozuo 操作
+                tr
+                    td 
+                        img(src="#{img_path}/goods/#{goods_img[0]}")
+                    td 
+                        a(href="#") #{goods_name[0]}
+                    td ￥20
+                    td 8
+                    td 1
+                    td(rowspan="2") ￥40
+                    td(rowspan="2") 已发货
+                    td(rowspan="2") 
+                        button 查看订单
+    
+    .user_goods_add
+        .add_goods_title 
+            i.icon_margin.glyph-icon-inbox-minus
+            span 添加寄卖物品
+        form.form_add_user_goods(role="form", action="/user_add_goods", method="post")
+            table
+                tr
+                    td 物品名称
+                    td 
+                        input(type="text", name="goods_name")
+                tr
+                    td 价格
+                    td
+                        input(type="text", name="goods_price")
+                tr
+                    td 类别
+                    td 
+                        select
+                            option 请选择
+                            - for(var item_a in sorts)
+                                option  #{item_a}
+                tr
+                    td 几成新
+                    td
+                        input(type="text", name="level")
+                tr
+                    td 数量
+                    td
+                        select
+                            -for(var i=1;i<100;i++)
+                                option #{i+1}
+                tr
+                    td 简介
+                    td
+                        textarea(cols="40", rows="7", maxlength="150", name="goods_intro", value="", required)
+                tr
+                    td 图片
+                    td
+                        input(type="file", name="goods_img")
+                        i.icon_margin.glyph-icon-circle-plus.icon_ok
+            .user_goods_add_btn
+                button(type="reset") 取消
+                button(type="submit") 寄卖
+
+
+

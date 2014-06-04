@@ -47,6 +47,15 @@
 }
 .table_change_user_msg tr td {
     min-width:100px;
+    border:none;
+}
+.table_change_user_msg,
+.table_change_user_msg td ,
+.table_update_user_msg,
+.table_update_user_msg td,
+.form_change_user_pwd table,
+.form_change_user_pwd td {
+    border:none;
 }
 .change_msg_content {
     min-width:140;

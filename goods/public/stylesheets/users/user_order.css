@@ -1,0 +1,35 @@
+.user_order {
+    width:100%;
+    margin:auto;
+}
+
+.user_order_title {
+    padding:20px 35px;
+    color:#3cb371;
+}
+.user_order_2{    
+    width:49.5%;
+}
+.user_order img {
+    width:26px;
+    height:26px;
+}
+.user_order table {
+    max-width:980px;
+    width:920px;
+    min-width:500px;
+    text-align: center;
+    margin:auto;
+    padding: 20px 0px;
+    margin-bottom: 30px;
+}
+.user_order table tr td {
+    min-width:50px;
+    max-width: 150px;
+}
+.order_status{
+    width:100px;
+}
+.order_caozuo {
+    width:60px;
+}

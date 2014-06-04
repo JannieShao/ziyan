@@ -1,0 +1,43 @@
+.user_control {
+    padding-top:20px; 
+    padding-bottom:20px;
+}
+.user_control_select_div {
+    width:880px;
+    margin:auto;
+    margin-bottom: 10px;
+}
+.user_control_select_div input,
+.user_control_select_div select {
+    margin-right: 20px;
+}
+.user_control_paixu {
+    width:920px;
+    margin:auto;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.user_control_paixu a {
+    margin:0px 10px;
+}
+.user_control table {
+    width:980px;
+    margin:auto;
+    text-align: center;
+}
+.user_control table td {
+    height:38px;
+}
+.user_no,
+.user_msg,
+.user_point {
+    width:80px;
+}
+.user_goods,
+.user_on,
+.user_need {
+    width:160px;
+}
+.user_action {
+    width:120px;
+}

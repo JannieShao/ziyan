@@ -1,9 +1,10 @@
 var conn = require("./conn/connection")
-
+var u2 = require("../routes/util2")
 //add
-exports.need_add = function(args, cb) {
+exports.need_add = function(args, cb) {    
+    var now_date = u2.date_format(new Date())
     var sql = "insert into needs_msg(user_id,add_time,good_name,amount,introduction,school) values("
-        sql += args.user_id+",'"+args.add_time+"','"+args.good_name+"',"+args.amount+",'"+args.introduction+"','"+args.school"');"
+        sql += args.user_id+",'"+now_date+"','"+args.good_name+"',"+args.amount+",'"+args.introduction+"','"+args.school+"');"
     conn.exec_sql(sql, cb)
 }
 

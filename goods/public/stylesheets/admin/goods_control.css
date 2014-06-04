@@ -1,0 +1,34 @@
+.goods_control {
+    padding-top:20px; 
+    padding-bottom:20px;
+}
+.goods_control img {
+    width:30px;
+    height:30px;
+}
+.goods_control_select_div {
+    width:880px;
+    margin:auto;
+    margin-bottom: 10px;
+}
+.goods_control_select_div input,
+.goods_control_select_div select {
+    margin-right: 20px;
+}
+.goods_control_paixu {
+    width:920px;
+    margin:auto;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.goods_control_paixu a {
+    margin:0px 10px;
+}
+.goods_control table {
+    width:980px;
+    margin:auto;
+    text-align: center;
+}
+.goods_control table td {
+    height:38px;
+}

@@ -1,0 +1,160 @@
+extends ./includes/top
+append main
+    .content
+        .main
+            .needs_msg
+                .select_div
+                    span.select_title 发布时间：
+                    input.Wdate.date-input(name="date_selected", type="text",value="", onclick="WdatePicker()")
+                    span.select_title 类型：
+                    select
+                        option 请选择
+                        - for(var item_a in sorts)
+                            option #{item_a}
+                    select
+                        option 请选择
+                    select
+                        option 请选择
+                    select
+                        option 请选择
+                    span.select_title 所在学校：
+                    input(type="text")
+                    button#btn-select.btn.btn-default(type="button") 查询
+                    hr
+                table
+                    tr.show_needs_msg_titles
+                        td.needs_msg_no 编号
+                        td.needs_msg_title 主题
+                        td.needs_msg_time 发布时间
+                        td.needs_msg_intro 简介
+                        td.needs_msg_sum 数量
+                        td.needs_msg_school 所在学校
+                        td.needs_msg_needer 需求者
+                    tr
+                        td 32
+                        td 求台式电脑一台
+                        td 2014-5-27 19:10:14
+                        td 台式机，配件齐全
+                        td 1
+                        td 陕西科技大学
+                        td
+                            a(href="")
+                                i.icon-comments
+                                span.msg_needer qq
+                    tr
+                        td 31
+                        td 急需mp3一枚
+                        td 2014-5-27 18:12:14
+                        td 4G及以上内存，菜单可见
+                        td 1
+                        td 陕西科技大学
+                        td
+                            a(href="")
+                                i.icon-comments
+                                span.msg_needer cc
+                    tr
+                        td 30
+                        td 求高数课本一套
+                        td 2014-5-27 18:02:19
+                        td 上下两册，考研补习，急求
+                        td 1
+                        td 陕西科技大学
+                        td
+                            a(href="")
+                                i.icon-comments
+                                span.msg_needer ziyan
+                    tr
+                        td 28
+                        td 急！急！急！工图工具一份
+                        td 2014-5-27 15:12:13
+                        td 可以木有小刀和橡皮擦
+                        td 1
+                        td 陕西科技大学
+                        td
+                            a(href="")
+                                i.icon-comments
+                                span.msg_needer aaa
+                    tr
+                        td 27
+                        td 求购小米3手机壳一枚
+                        td 2014-5-27 14:21:14
+                        td 有蓝色的更好
+                        td 1
+                        td 陕西科技大学
+                        td
+                            a(href="")
+                                i.icon-comments
+                                span.msg_needer ddd
+                    tr
+                        td 26
+                        td 急需笔记本散热架
+                        td 2014-5-27 10:12:37
+                        td 双风扇最佳
+                        td 1
+                        td 陕西科技大学
+                        td
+                            a(href="")
+                                i.icon-comments
+                                span.msg_needer bbb
+                    tr
+                        td 25
+                        td 求购小米3手机壳一枚
+                        td 2014-5-27 9:45:14
+                        td 有蓝色的更好
+                        td 1
+                        td 陕西科技大学
+                        td
+                            a(href="")
+                                i.icon-comments
+                                span.msg_needer ddd
+                    tr
+                        td 22
+                        td 急需笔记本散热架
+                        td 2014-5-27 9:43:32
+                        td 双风扇最佳
+                        td 1
+                        td 陕西科技大学
+                        td
+                            a(href="")
+                                i.icon-comments
+                                span.msg_needer bbb
+                    tr
+                        td 20
+                        td 求台式电脑一台
+                        td 2014-5-27 9:40:14
+                        td 台式机，配件齐全
+                        td 1
+                        td 陕西科技大学
+                        td
+                            a(href="")
+                                i.icon-comments
+                                span.msg_needer qq
+                    tr
+                        td 19
+                        td 急需mp3一枚
+                        td 2014-5-27 9:26:34
+                        td 4G及以上内存，菜单可见
+                        td 1
+                        td 陕西科技大学
+                        td
+                            a(href="")
+                                i.icon-comments
+                                span.msg_needer cc
+                    tr
+                        td 17
+                        td 求购小米3手机壳一枚
+                        td 2014-5-27 9:21:14
+                        td 有蓝色的更好
+                        td 1
+                        td 陕西科技大学
+                        td
+                            a(href="")
+                                i.icon-comments
+                                span.msg_needer ddd
+
+
+
+//-------------------------------------------------------------------------------------
+append head
+    link(rel="stylesheet", href="/stylesheets/needs.css",type="text/css")
+    script(src="/vendor/my97datepicker/wdatepicker.js", type="text/javascript")

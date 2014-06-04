@@ -1,0 +1,25 @@
+.user_addr {
+    width:100%;
+    margin:auto;
+}
+.user_addr_title {
+    padding:20px 35px;
+    color:#3cb371;
+}
+.user_addr table {
+    max-width:980px;
+    width:920px;
+    min-width:500px;
+    text-align: center;
+    margin:auto;
+    padding: 20px 0px;
+}
+.user_addr table tr td {
+    min-width:50px;
+    max-width: 150px;
+}
+.addr_moren {
+    background: gray;
+    border-color:gray;
+    text-decoration: line-through;
+}

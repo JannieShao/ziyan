@@ -1,6 +1,7 @@
 var u2 = require('./util2');
 var model_users = require('../model/users');
-
+var model_cars = require('../model/cars');
+//user_center
 exports.update_user_msg = function(req, res){
     var id = req.params.id
     var name = req.body.uname
@@ -122,3 +123,52 @@ exports.change_user_pwd = function(req, res) {
         }
     })
 }
+//user_car
+exports.remove_car = function(req, res) {
+    var id = req.params.id
+    model_cars.car_delete_by_id(id, function(err, rows) {
+        if(err) {
+            console.log("remove car "+id+"fail");
+            res.send({ok: 0})
+        } else {
+            res.send({ok: 1})
+        }
+    })
+}
+
+// exports.get_car_msg_by_user = function(req,res) {
+//     var cookies = req.cookies
+//     var user = cookies["users"]
+//     var current_page = req.body.req_page
+//     if(current_page === undefined || current_page === NaN || current_page < 1) {
+//         current_page = 1
+//     }
+//     current_page = Number(current_page)
+
+//     var count = 0
+//     model_car.car_select_total_by_user(user.id, function(err, rows) {
+//         if(err) {
+//             ms.log.error("counting all booking info failed")
+//             return res.send({ok:0})
+//         }
+//         if(rows[0].count !== undefined) {
+//             count = rows[0].total
+//         }
+
+//         var page = pagination(current_page, count)
+//         //console.log("\n>>>>>>>>>>>>>>>count:"+count+"\n")
+
+//         var offset = (current_page - 1) * page_size || 0
+//         model_book.get_booking_msg_by_user(offset, page.page_size, user.id, function(err , rows) {
+//             if(err) {
+//                 ms.log.error("Get car msg failed ")
+//                 return util.render_page_500(res)
+//             }
+//             page.list = rows
+//             res.render("/user#user_car" , {page : page, user : user})
+//         })
+//     })
+
+
+
+// }

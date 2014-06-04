@@ -1,3 +1,9 @@
+//extends ./main
+
+//append user_right
+//    #user_center
+//        .r_container
+//            .user_right_to_center
 .user_center_title
     i.icon_margin.glyph-icon-cogwheel
     span 账户设置
@@ -107,7 +113,7 @@
             .div_change_user_msg
                 .user_center_nick 昵称：#{user.nick}
                 form.form_update_user_msg(role="form", action="/update_user_msg", method="post")
-                    table
+                    table.table_update_user_msg
                         tr 
                             td
                                 .user_center_update_name.clearfix
@@ -121,7 +127,7 @@
                         tr
                             td
                                 .user_center_update_sex.clearfix
-                                    .change_user_sex
+                                    .update_user_sex
                                         input.sex(type="radio",name="sex",value="f",checked="checked",required)
                                         i.icon_margin.glyph-icon-male
                                         span.radio_m 男

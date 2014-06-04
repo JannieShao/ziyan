@@ -1,0 +1,68 @@
+/*.main div {
+    border: 1px gray solid;
+    border-radius: 5px;    
+}*/
+.order {
+    width:80%;
+    margin:auto;
+}
+.order_title,
+.order_msg,
+.order_addr,
+.order_action {
+    width:800px;
+}
+.order_title {
+    text-align: center;
+    border-bottom: 1px gray solid;
+}
+.order_addr_title {
+    border-bottom: 1px gray solid;
+    margin-bottom: 10px;
+}
+.order_msg table {
+    width:800px;
+    text-align: center; 
+    margin:auto;
+    margin-top:20px;
+}
+.order_msg table tr td {
+    min-width:100px;
+    height:40px;
+}
+.order_msg img {
+    width:34px;
+    height:34px;
+}
+.order_total {
+    width:800px;
+    margin:auto;
+    margin-top:20px;
+}
+.order_total p {
+    float:right;
+    margin-right:50px;
+}
+.order_addr_main {
+    clear:both;
+}
+.order_addr input,
+.order_addr_name,
+.order_addr_addr,
+.order_addr_tel {
+    margin:3px 10px;
+    float:left;
+}
+.order_addr_add {
+    clear:both;
+    margin-top:35px;
+    margin-left:35px;
+}
+.order_action {
+    clear:both;
+    height:40px;
+}
+.order_action button {
+    margin:5px 10px;
+    float:right;
+}

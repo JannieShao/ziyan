@@ -1,3 +1,6 @@
+- var  img_path = "/images"
+- var sorts_all = {"书籍":{"教材":{"基础课程":{"高等数学":0,"大学英语":0,"线性代数":0,"概率论":0,"大学物理":0,"数电模电":0,"计算机基础":0,"工程制图":0,"大学语文":0,"思想道德修养":0,"马克思主义哲学原理":0,"毛概":0,"其他":0},"专业相关":{"机械工程":0,"计算机":0,"信息科学":0,"经济管理":0,"材料科学":0,"外国语":0,"环境与化工":0,"艺术设计":0,"医学":0,"建筑学":0,"其他":0}},"考研考级":{"考研":{"英语":0,"数学":0,"政治":0,"专业课":0},"考级":{"英语四级":0,"英语六级":0,"计算机等级":0,"软考":0,"其他":0}},"杂志":0,"小说":0,"漫画":0,"其他":0},"数码":{"手机":0,"数码相机":0,"mp3/4":0,"U盘":0,"读卡器":0,"光盘":0,"配件":{"耳机":0,"手机电池":0,"移动电源":0,"充电器":0,"数据线":0,"保护壳/套":0,"支架":0,"其他":0},"其他":0},"电脑及周边":{"台式机":0,"笔记本":0,"路由器":0,"交换机":0,"周边配件":{"显示器":0,"键盘":0,"鼠标":0,"摄像头":0,"音响":0,"散热器":0,"电源":0,"CPU":0,"主板":0,"显卡":0,"声卡":0,"其他":0},"其他":0},"卡/票/证":{"卡":{"手机卡":0,"充值卡":0,"上网卡":0,"公交卡":0,"IP卡/电话卡":0,"打折卡/优惠卡":0,"其他":0},"票":{"门票":0,"其他":0},"证":{"听课证":0,"其他":0}},"休闲娱乐":{"单车":0,"桌游":0,"乐器":0,"玩具":0,"收藏":0,"其他":0},"饰品/手表":{"饰品":{"项链":0,"手链":0,"脚链":0,"挂坠":0,"耳钉":0,"其他":0},"手表":{"男表":0,"女表":0}},"鞋包":{"鞋":{"男鞋":0,"女鞋":0},"包":{"男包":0,"女包":0,"箱包":0}},"服装":{"男装":0,"女装":0},"体育用品":{"轮滑/滑板":{"轮滑鞋":0,"滑板":0,"护具":0,"其他":0},"球/球拍":{"羽毛球":0,"网球":0,"乒乓球":0,"足球":0,"篮球":0,"排球":0,"其他":0},"球衣/球鞋":{"球衣":0,"球鞋":0},"运动服":0,"跆拳道服":0,"泳衣":0,"其他":0},"女生专区":{"指甲油":0,"发簪":0,"发夹":0,"其他":0},"男生专区":{"打火机":0,"剃须刀":0,"其他":0},"其他":0}
+
 doctype html
 html(lang="zh-cn")
     head
@@ -9,8 +12,25 @@ html(lang="zh-cn")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title 管理员后台
         link(rel="stylesheet", href="/stylesheets/admin/main.css",type="text/css")
+        link(rel="stylesheet", href="/stylesheets/admin/admin_center.css",type="text/css")
+        link(rel="stylesheet", href="/stylesheets/admin/user_control.css",type="text/css")
+        link(rel="stylesheet", href="/stylesheets/admin/goods_control.css",type="text/css")
+        link(rel="stylesheet", href="/stylesheets/admin/needs_msg.css",type="text/css")
+        link(rel="stylesheet", href="/stylesheets/admin/orders_control.css",type="text/css")
+        link(rel="stylesheet", href="/stylesheets/admin/user_msg.css",type="text/css")
         link(rel="stylesheet", href="/vendor/bootstrap/css/bootstrap.min.css",type="text/css")
         link(rel="stylesheet", href="/vendor/font-awesome/css/font-awesome.min.css",type="text/css")
+        link(rel="stylesheet", href="/vendor/glyphicons/css/glyphicons.css",type="text/css")
+        script(type="text/javascript", src="/vendor/jquery/jquery-2.1.0.min.js")
+        script(src="/vendor/my97datepicker/wdatepicker.js", type="text/javascript")
+        script(src="/javascripts/admin/main.js", type="text/javascript")
+        script(src="/javascripts/admin/admin_center.js", type="text/javascript")
+        script(src="/javascripts/admin/user_control.js", type="text/javascript")
+        script(src="/javascripts/admin/goods_control.js", type="text/javascript")
+        script(src="/javascripts/admin/needs_msg.js", type="text/javascript")
+        script(src="/javascripts/admin/orders_control.js", type="text/javascript")
+        script(src="/javascripts/admin/user_msg.js", type="text/javascript")
+        
     body
         .top_nav
             p 校易通-管理员后台
@@ -34,13 +54,13 @@ html(lang="zh-cn")
                             i.goods_icon.glyphicon.glyphicon-gift
                             span 商品
                     li
+                        a.needs_msg(href="#needs_msg")
+                            i.needs_msg_icon.glyphicon.glyphicon-comment
+                            span 需求消息
+                    li
                         a.orders_control(href="#orders_control")
                             i.orders_icon.glyphicon.glyphicon-list-alt
                             span 订单
-                    li
-                        a.gx_msg(href="#gx_msg")
-                            i.gx_msg_icon.glyphicon.glyphicon-comment
-                            span 供需消息
                     li
                         a.user_msg(href="#user_msg")
                             i.user_msg_icon.glyphicon.glyphicon-envelope
@@ -50,24 +70,24 @@ html(lang="zh-cn")
                 #admin_center(style="display:inline")
                     .r_container
                         .admin_right_to_center
-                            //-include ./meeting_room
+                            block admin_center
                 #user_control
                     .r_container
                         .admin_right_to_center
-                            //-include ./permission
+                            include ./user_control
                 #goods_control
                     .r_container
                         .admin_right_to_center
-                            //-include ./booking
+                            include ./goods_control
                 #orders_control
                     .r_container
                         .admin_right_to_center
-                            //-include ./book_msg
-                #gx_msg
+                            include ./orders_control
+                #needs_msg
                     .r_container
                         .admin_right_to_center
-                            //-include ./book_msg
+                            include ./needs_msg
                 #user_msg
                     .r_container
                         .admin_right_to_center
-                            //-include ./book_msg
+                            include ./user_msg

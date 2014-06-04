@@ -1,0 +1,50 @@
+.needs_msg {
+    width:1080px;
+    margin:auto;
+}
+.select_title {
+    margin-left:20px;
+}
+.select_div {
+    width:1064px;
+    margin:auto;
+}
+select {
+    width:90px;
+    margin-right:10px;
+}
+.select_div hr {
+    border:1px gray solid;
+}
+.needs_msg table {
+    width:1024px;
+    margin:auto;
+    text-align: center;
+    margin-top:10px;
+}
+.needs_msg table td {
+    height:32px;
+}
+.show_needs_msg_titles {
+    height:42px;
+}
+.needs_msg_no,
+.needs_msg_sum {
+    width:60px;
+}
+.needs_msg_title {
+    width:180px;
+}
+.needs_msg_time,
+.needs_msg_school {
+    width:140px;
+}
+.needs_msg_intro {
+    width:240px;
+}
+.needs_msg_needer {
+    width:100px;
+}
+.msg_needer {
+    margin-left:10px;
+}

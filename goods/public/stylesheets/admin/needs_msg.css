@@ -1,0 +1,43 @@
+.needs_msg {
+    padding-top:20px; 
+    padding-bottom:20px;
+}
+.needs_msg_select_div {
+    width:880px;
+    margin:auto;
+    margin-bottom: 10px;
+}
+.needs_msg_select_div input,
+.needs_msg_select_div select {
+    margin-right: 20px;
+}
+.needs_msg table {
+    width:980px;
+    margin:auto;
+    text-align: center;
+}
+.needs_msg table td {
+    height:38px;
+}
+.needs_msg_no,
+.needs_msg_sum {
+    width:50px;
+}
+.needs_msg_title {
+    width:150px;
+} 
+.needs_msg_time {
+    width:140px;
+}
+.needs_msg_school {
+    width:120px;
+}
+.needs_msg_needer {
+    width:70px;
+}
+.needs_msg_status {
+    width:60px;
+} 
+.needs_msg_action {
+    width:100px;
+}

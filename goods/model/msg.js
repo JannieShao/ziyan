@@ -1,9 +1,10 @@
 var conn = require("./conn/connection")
-
+var u2 = require("../routes/util2")
 //add
 exports.msg_add = function(args, cb) {
+    var now_date = u2.date_format(new Date())
     var sql = "insert into message(from_id,user_id,send_time,content) values("
-        sql += args.from+","+args.to+",'"+args.times+"','"+args.content+"');"
+        sql += args.from+","+args.to+",'"+now_date+"','"+args.content+"');"
     conn.exec_sql(sql, cb)
 }
 
@@ -25,6 +26,11 @@ exports.msg_select_by_from = function(id, cb) {
 
 exports.msg_select_by_to = function(id, cb) {
     var sql = "select * from message where user_id = "+id+";"
+    conn.exec_sql(sql, cb)
+}
+
+exports.msg_select_by_time = function(date, cb) {
+    var sql = "select * from message where TO_DAYS(send_time) = TO_DAYS('"+date+"');"
     conn.exec_sql(sql, cb)
 }
 

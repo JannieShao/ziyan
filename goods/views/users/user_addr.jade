@@ -1,1 +1,24 @@
-.user_addr 收货地址
+.user_addr_title
+    i.icon_margin.glyph-icon-list
+    span 收货地址
+.user_addr.clearfix   
+    button.add_goods 添加收货地址
+    -var addr = [{name:"张三",tel:"18710831111"},{name:"李四",tel:"18710831112"},{name:"王五",tel:"18710831113"},{name:"赵六",tel:"18710831114"}]
+    table
+        tr.table_titles
+            td 收件人姓名
+            td 收件地址
+            td 联系方式
+            td 操作
+        - for(var i=0;i<4;i++)
+            tr
+                td #{addr[i].name}
+                td 陕西省西安市陕西科技大学
+                td #{addr[i].tel}
+                td
+                    button 修改
+                    button 删除
+                    - if( i!==0)
+                        button 设为默认
+                    - else
+                        button.addr_moren 设为默认

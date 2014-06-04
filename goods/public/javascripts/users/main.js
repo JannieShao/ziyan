@@ -29,6 +29,6 @@ $(document).ready(function() {
     $(".left ul li a").click(function() {
         location.replace(hrefs[0]+$(this).attr('href'))
         location.reload()
-    })      
+    })
 
 })

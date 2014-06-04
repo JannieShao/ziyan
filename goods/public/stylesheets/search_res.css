@@ -1,0 +1,52 @@
+.main_middle_center_ul {
+    width: 90%;
+    margin:auto;
+}
+.main_middle_center_ul ul {
+    margin:0px;
+    padding: 0px;
+}
+.main_middle_center_ul ul li{
+    float:left;
+    margin:2px 10px 20px 10px;
+    list-style: none;
+}
+.goods_img{
+    width:210px;
+    height:210px;
+    margin-bottom: 10px;
+}
+.goods_name,
+.goods_price,
+.goods_ower {
+    font-size:12px;
+    margin:auto;
+    margin-top:10px;
+    width:180px;
+    line-height:15px;
+}
+.span1,
+.span2{
+    font-size:16px;
+}
+.span2{
+    color:#aa584d;
+    font-weight:bold;
+}
+.span3{
+    float:right;
+    font-size:13px;
+    color:#969696;
+}
+.span4,
+.span5 {
+    font-size:13px;
+    color:#4f4f4f;
+
+}
+.span4 {
+    float:left;
+}
+.span5 {
+    float:right;
+}

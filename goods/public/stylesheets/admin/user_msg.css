@@ -1,0 +1,22 @@
+.user_msg_show {
+    padding-top:20px; 
+    padding-bottom:20px;
+}
+.user_msg_show table {
+    width:880px;
+    margin:auto;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.user_msg_show table td{
+    height:32px;
+}
+.no_read {
+    color:#aa584d;
+}
+.have_read {
+    color:#15B69A;
+}
+.table_show_msg_status {
+    width:80px;
+}

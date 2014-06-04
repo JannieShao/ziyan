@@ -1,0 +1,28 @@
+extends ./includes/top
+append main
+    .content
+        .main
+            .search_res
+                .main_middle_center_ul
+                    ul.clearfix
+                        - var v = ["name","price","user","school"]
+                        - var goods_msg = {0:{"name":"大学化学实验","price":"5.00","user":"aaa","school":"陕西科技大学"},1:{"name":"加工工艺基础","price":"5.00","user":"bbb","school":"陕西科技大学"},2:{"name":"管理学-原理与方法","price":"5.00","user":"ccc","school":"陕西科技大学"},3:{"name":"数字图像处理","price":"5.00","user":"ziyan","school":"陕西科技大学"}}
+                        - for(var x = 4;x<18;x++)goods_msg[x]= {"name":"数字图像处理","price":"5.00","user":"qqt","school":"陕西科技大学"}
+                        - for(var i=0;i<18;i++)
+                            li
+                                a(href="#")
+                                    .goods_img
+                                        img(src="#{img_path}/goods/#{i+2}.jpg")
+                                .goods_name
+                                    a(href="#") #{goods_msg[i].name}
+                                .goods_price
+                                    span.span1 ￥
+                                    span.span2 #{goods_msg[i].price}
+                                    span.span3 8成新
+                                .goods_ower
+                                    span.span4 #{goods_msg[i].user}
+                                    span.span5 #{goods_msg[i].school}
+//-------------------------------------------------------------------------------------
+append head
+    link(rel="stylesheet", href="/stylesheets/search_res.css",type="text/css")
+

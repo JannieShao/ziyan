@@ -21,14 +21,15 @@ CREATE TABLE IF NOT EXISTS users(
 );
 
 -- status:
---     0: 发布中
---     1：交易成功
+--     0: 审核中
+--     1：发布中
+--     2：交易成功
 
 CREATE TABLE IF NOT EXISTS needs_msg(
     n_id            int             auto_increment,
     user_id         int             NOT NULL,
-    add_time        varchar(50)     NOT NULL,
-    good_name       varchar(50)     NOT NULL,
+    add_time        datetime        NOT NULL,
+    good_name       varchar(64)     NOT NULL,
     amount          int             NOT NULL,
     introduction    varchar(512),
     school          varchar(128),
@@ -46,7 +47,7 @@ CREATE TABLE IF NOT EXISTS message(
     msg_id          int             auto_increment,
     from_id         int             NOT NULL,
     user_id         int             NOT NULL,
-    send_time       varchar(50)     NOT NULL,
+    send_time       datetime        NOT NULL,
     content         varchar(512)    NOT NULL,
     msg_status      int             default '0',
     primary key (msg_id)
@@ -55,6 +56,7 @@ CREATE TABLE IF NOT EXISTS message(
 -- addr_status:
 --     0: 普通状态
 --     1：默认地址
+--     2：已被用户删除
 
 CREATE TABLE IF NOT EXISTS address(
     addr_id         int             auto_increment,
@@ -67,13 +69,15 @@ CREATE TABLE IF NOT EXISTS address(
 );
 
 -- good_status:
---     0: 上架
+--     0: 在架
 --     1：已下架
+--     2：已售
 
 CREATE TABLE IF NOT EXISTS goods(
     good_id         int             auto_increment,
     good_name       varchar(64)     NOT NULL,
     user_id         int             NOT NULL,
+    add_time        datetime        NOT NULL,
     good_price      varchar(50)     NOT NULL,
     sort_id         int             NOT NULL,
     level           int             NOT NULL,
@@ -95,15 +99,18 @@ CREATE TABLE IF NOT EXISTS sorts(
 
 -- order_status:
 --     0: 新提交订单
---     1：已发货
---     2：已签收
---     3：待评价
---     4：交易关闭
+--     1：供应方已确认
+--     2：已发货
+--     3：已签收
+--     4：待评价
+--     5：交易关闭
+--     6：用户已删除
 
 CREATE TABLE IF NOT EXISTS orders(
     order_id        int             auto_increment,
     user_id         int             NOT NULL,
     addr_id         int             NOT NULL,
+    add_time        datetime        NOT NULL,
     express         varchar(64),
     exp_id          varchar(64),
     order_status    int             default '0',

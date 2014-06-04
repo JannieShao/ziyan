@@ -1,0 +1,70 @@
+extends ./includes/top
+append main
+    .content
+        .main.clearfix
+            .show_goods_imgs.clearfix
+                .show_goods_img_big 
+                    img(src="#{img_path}/goods/computer1.jpg")
+                .show_goods_img
+                    ul
+                        li.img_selected
+                            img(src="#{img_path}/goods/computer1.jpg")
+                        li
+                            img(src="#{img_path}/goods/computer2.jpg")
+                        li
+                            img(src="#{img_path}/goods/computer3.jpg")
+            .show_goods_msg.clearfix
+                .goods_msg
+                    .goods_name 
+                        h2 台式电脑
+                    .goods_price
+                        .msg_title
+                            span 价格：
+                        .msg
+                            span ￥
+                            span 1190.00
+                    .goods_sort
+                        .msg_title 
+                            span 类别：
+                        .msg
+                            span 电脑及周边-台式机
+                    .goods_level
+                        .msg_title 
+                            span 新旧程度：
+                        .msg
+                            span 8成新
+                    .goods_sum
+                        .msg_title 
+                            span 数量：
+                        .msg
+                            span 1
+                    .goods_user
+                        .msg_title
+                            span 供应者：
+                        .msg
+                            a(href="#")
+                                i.icon-comments
+                                span.msg_user ccc
+                    .goods_action
+                        button 加入购物车
+                        button 立即购买
+                .show_goods_intro
+                        
+                    h2 基本信息
+                    .intro_main
+                        |品牌: Lenovo/联想
+                        br
+                        |型号: C305-舒适型(红)
+                        br
+                        |屏幕尺寸: 20英寸
+                        br
+                        |内存容量: 4GB
+                        br
+                        |硬盘容量: 320GB
+                        br
+                        |显存容量: 512MB
+
+
+//-------------------------------------------------------------------------------------
+append head
+    link(rel="stylesheet", href="/stylesheets/show_goods.css",type="text/css")

@@ -1,6 +1,10 @@
 
--  var  img_path = "/images"
-
+- var  img_path = "/images"
+- var tag = ["top_books","top_shuma","top_computer","top_cards","top_plays","top_decoration","top_shoes","top_clothes","top_sports","top_girls","top_boys","top_boys"]
+- var tag2 = ["book_all","shuma_all","computer_all","cards_all","plays_all","decoration_all","shoes_all","clothes_all","sports_all","girls_all","boys_all","boys_all"]
+- var icons = ["icon-book","icon-camera-retro","icon-desktop","icon-credit-card","icon-dashboard","icon-github-alt","icon-suitcase","glyph-icon-sweater","glyph-icon-table-tennis","glyph-icon-girl","glyph-icon-old-man","icon-globe",]
+- var goods_img = ["baobao.jpg","computer.jpg","pingban.jpg","tel.jpg","zuqiu.jpg","001.jpg"]
+- var goods_name = ["单肩包","笔记本","平板电脑","手机","足球"]
 
 doctype html
 html(lang="zh-cn")
@@ -71,64 +75,30 @@ html(lang="zh-cn")
                     li.top_all_softs.clearfix                         
                         span 全部分类
                         .top_soft_show_all
-                            .top_softs 
-                                #top_books.clearfix 
-                                    i.soft_left_icon.icon-book
-                                    span 书 籍
-                                    i.soft_right_icon.icon-caret-right
-                                    .book_all
-                                        .top_soft_detail
-                                            span 教材
-                                            span 基础课程
-                                            ul
-                                                li 高数
-                                            span 专业相关
-                                            ul
-                                                li 机械工程
-                                        .top_soft_detail
-                                            span  考研考级
-
-                                #top_shuma.clearfix
-                                    i.icon-camera-retro.soft_left_icon
-                                    span 数 码
-                                    i.soft_right_icon.icon-caret-right
-                                #top_computer.clearfix
-                                    i.icon-desktop.soft_left_icon
-                                    span 电脑及周边
-                                    i.soft_right_icon.icon-caret-right
-                                #top_cards.clearfix
-                                    i.icon-credit-card.soft_left_icon
-                                    span 卡/票/证
-                                    i.soft_right_icon.icon-caret-right
-                                #top_plays.clearfix
-                                    i.icon-dashboard.soft_left_icon
-                                    span 休闲娱乐
-                                    i.soft_right_icon.icon-caret-right
-                                #top_decoration.clearfix
-                                    i.icon-github-alt.soft_left_icon
-                                    span 饰品/手表
-                                    i.soft_right_icon.icon-caret-right
-                                #top_shoes.clearfix
-                                    i.icon-suitcase.soft_left_icon
-                                    span 鞋 包
-                                    i.soft_right_icon.icon-caret-right
-                                #top_clothes.clearfix
-                                    i.glyph-icon-sweater.soft_left_icon
-                                    span 服 装
-                                    i.soft_right_icon.icon-caret-right
-                                #top_sports.clearfix
-                                    i.glyph-icon-table-tennis.soft_left_icon
-                                    span 体育用品
-                                    i.soft_right_icon.icon-caret-right
-                                #top_girls.clearfix
-                                    i.glyph-icon-girl.soft_left_icon
-                                    span 女生专区
-                                    i.soft_right_icon.icon-caret-right
-                                #top_boys.clearfix
-                                    i.glyph-icon-old-man.soft_left_icon
-                                    span 男生专区
-                                    i.soft_right_icon.icon-caret-right
-
+                            .top_softs
+                                - var i = 0
+                                - for(var item_a in sorts) 
+                                    div(id="#{tag[i]}").clearfix 
+                                        i(class="#{icons[i]}").soft_left_icon
+                                        span #{item_a}
+                                        i.soft_right_icon.icon-caret-right
+                                        - if(sorts[item_a] !== 0) 
+                                            div(class="#{tag2[i]}").clearfix
+                                                - i++
+                                                - for(var item_b in sorts[item_a])
+                                                    .sorts_b
+                                                        .sorts_b_title
+                                                            span #{item_b}
+                                                        - if(sorts[item_a][item_b] !== 0)
+                                                            - for(var item_c in sorts[item_a][item_b])
+                                                                .sorts_c
+                                                                    .sorts_c_title
+                                                                        span #{item_c}
+                                                                    - if(sorts[item_a][item_b][item_c] !== 0)
+                                                                        - for(var item_d in sorts[item_a][item_b][item_c])
+                                                                            .sorts_d_title
+                                                                                span #{item_d}
+                                                                //.draw_line                                                 
                     li
                         a(href="/index") 首页
                     li 

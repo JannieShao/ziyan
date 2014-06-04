@@ -1,10 +1,18 @@
 .login {
-    width:300px;
+    width:215px;
+    margin:auto;
+/*    border: 1px #5f9ea0 solid;
+    border-radius: 3px;*/
+    padding:45px 45px 25px 45px;
+}
+
+.login_title {
+    width:60px;
     margin:auto;
 }
 .user_login_nick,
 .uer_login_pwd {
-    
+    margin:5px;
 }
 
 .login_nick,
@@ -12,4 +20,8 @@
     width:200px;
     height:26px;
     border-radius: 3px;
+}
+.login_btn_div {
+    width:180px;
+    margin:auto;
 }

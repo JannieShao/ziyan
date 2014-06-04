@@ -1,1 +1,62 @@
-.user_msg 站内信
+.user_msg_title
+    i.icon_margin.icon-envelope
+    span 站内信
+.user_msg.clearfix
+    .user_msg_show
+        table
+            tr.table_titles
+                td
+                td 发件人
+                td 内容
+                td 时间
+                td 状态
+                td 操作
+            tr
+                td
+                    i.glyph-icon-message-plus.no_read
+                td 张三
+                td 
+                    a(href="#") 测试
+                td 2014-5-27 16:11:34
+                td 未读
+                td
+                    button 删除
+            tr
+                td
+                    i.glyph-icon-message-empty.have_read
+                td 李四
+                td 
+                    a(href="#") 测试测试
+                td 2014-5-25 12:10:38
+                td 已读
+                td
+                    button 删除
+            tr
+                td
+                    i.glyph-icon-message-empty.have_read
+                td 王五
+                td 
+                    a(href="#") 测试测试测试测试测试测试...
+                td 2014-5-25 16:11:34
+                td 已读
+                td
+                    button 删除
+
+.user_msg_add
+    .add_msg_title 
+        i.icon_margin.glyph-icon-message-empty
+        span 站内信
+    table
+        tr
+            td 来自：
+            td 张三
+        tr
+            td 时间：
+            td 2014-5-27 16:11:34
+        tr
+            td 内容：
+            td
+                textarea(cols="40", rows="7", maxlength="150", name="cg_intro", value="", readonly) 测试
+    .user_msg_add_btn
+        button 返回
+        button 回复

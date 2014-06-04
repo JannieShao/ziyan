@@ -23,15 +23,15 @@ append main
                         a.but_user_addr(href="#user_addr")
                             i.user_addr_icon.glyphicon.glyph-icon-list 
                             span 收货地址
-                    - if (user.school)
+                    - if (user.name)
                         li
                             a.but_user_goods(href="#user_goods")
-                                i.user_goods_icon.glyphicon.glyphicon-list-alt
+                                i.user_goods_icon.glyphicon.glyph-icon-heart
                                 span 我的二手物品
                         li
                             a.but_user_needs(href="#user_needs")
-                                i.user_needs_icon.glyphicon.glyphicon-list-alt
-                                span 供需消息管理
+                                i.user_needs_icon.glyphicon.icon-comments
+                                span 需求消息管理
                     li
                         a.but_user_msg(href="#user_msg")
                             - if(user.new_msg_total)
@@ -73,6 +73,18 @@ append main
 //-------------------------------------------------------------------------------------
 append head
     link(rel="stylesheet", href="/stylesheets/users/main.css",type="text/css")
+    link(rel="stylesheet", href="/stylesheets/users/user_addr.css",type="text/css")
+    link(rel="stylesheet", href="/stylesheets/users/user_car.css",type="text/css")
     link(rel="stylesheet", href="/stylesheets/users/user_center.css",type="text/css")
+    link(rel="stylesheet", href="/stylesheets/users/user_goods.css",type="text/css")
+    link(rel="stylesheet", href="/stylesheets/users/user_msg.css",type="text/css")
+    link(rel="stylesheet", href="/stylesheets/users/user_needs.css",type="text/css")
+    link(rel="stylesheet", href="/stylesheets/users/user_order.css",type="text/css")
     script(type="text/javascript", src="/javascripts/users/main.js")
+    script(type="text/javascript", src="/javascripts/users/user_addr.js")
+    script(type="text/javascript", src="/javascripts/users/user_car.js")
     script(type="text/javascript", src="/javascripts/users/user_center.js")
+    script(type="text/javascript", src="/javascripts/users/user_goods.js")
+    script(type="text/javascript", src="/javascripts/users/user_msg.js")
+    script(type="text/javascript", src="/javascripts/users/user_needs.js")
+    script(type="text/javascript", src="/javascripts/users/user_order.js")
