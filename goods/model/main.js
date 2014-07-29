@@ -209,7 +209,7 @@ var show_sorts = function() {
                 if(err) {
                     console.log("err")
                 } else {
-                   console.log("success") 
+                   // console.log("success") 
                 }                
             })
         } else {
@@ -224,7 +224,7 @@ var show_sorts = function() {
                         if(err) {
                             console.log("err")
                         } else {
-                           console.log("success") 
+                           // console.log("success") 
                         }
                     })
                 } else {
@@ -248,7 +248,7 @@ var show_sorts = function() {
                                     if(err) {
                                         console.log("err")
                                     } else {
-                                       console.log("success") 
+                                       // console.log("success") 
                                     }
                                 })                                
                             }
